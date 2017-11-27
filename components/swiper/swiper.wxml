@@ -1,0 +1,17 @@
+<template name="swiper">
+    <view class="ele-container">
+        <swiper class="banner"
+                circular="true"
+                duration="750"
+                indicator-dots="{{indicatorDots}}"
+                autoplay="{{autoplay}}"
+                interval="{{interval}}"
+                duration="{{duration}}">
+            <block wx:for="{{imgUrls}}" wx:key="">
+                <swiper-item >
+                    <image class="slide-image" src="{{item}}"></image>
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+</template>

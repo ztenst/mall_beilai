@@ -1,0 +1,19 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/category/category",
+    "pages/find/find",
+    "pages/case/case",
+    "pages/my/my",
+    "pages/detail/detail",
+    "pages/collect/collect",
+    "pages/order/order",
+    "pages/brief/brief"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#181c1f",
+    "navigationBarTitleText": "sss",
+    "navigationBarTextStyle":"#fff"
+  }
+}

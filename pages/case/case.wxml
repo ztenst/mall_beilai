@@ -1,0 +1,75 @@
+<view class="app case bg-color ">
+    <view class="ele-container " wx:if="{{list.length>0}}">
+        <view class="case_list box">
+            <block wx:for="{{list}}" wx:key="id" data-id="{{item.id}}">
+                <view class="item">
+                    <view class="pic">
+                        <image src="{{item.image}}"></image>
+                    </view>
+                    <view class="info">
+                        [{{item.date}}] {{item.name}}
+                    </view>
+                </view>
+            </block>
+        </view>
+    </view>
+
+    <view class="loading-container box box-align-center box-pack-center" wx:if="{{loading}}">
+        <view class="loading-gif">
+            <image src="../../images/loadingdetail.gif"></image>
+        </view>
+        <view class="loading-text">加载中...</view>
+    </view>
+</view>
+<view class="tabBar box box-pack-center box-pack-between">
+    <navigator url="/pages/index/index" class="item">
+        <view class="cont">
+            <view class="pic">
+                <image src="../../images/icon-home.png"></image>
+            </view>
+            <view class="text">
+                首页
+            </view>
+        </view>
+    </navigator>
+    <navigator url="/pages/category/category" class="item">
+        <view class="cont">
+            <view class="pic">
+                <image src="../../images/icon-fenlei.png"></image>
+            </view>
+            <view class="text">
+                分类
+            </view>
+        </view>
+    </navigator>
+    <navigator url="/pages/find/find" class="item">
+        <view class="cont">
+            <view class="pic">
+                <image src="../../images/icon-find.png"></image>
+            </view>
+            <view class="text">
+                发现
+            </view>
+        </view>
+    </navigator>
+    <navigator url="/pages/case/case" class="item">
+        <view class="cont">
+            <view class="pic">
+                <image src="../../images/hov-case.png"></image>
+            </view>
+            <view class="text on">
+                案例
+            </view>
+        </view>
+    </navigator>
+    <navigator url="/pages/my/my" class="item">
+        <view class="cont">
+            <view class="pic">
+                <image src="../../images/icon-user.png"></image>
+            </view>
+            <view class="text">
+                我的
+            </view>
+        </view>
+    </navigator>
+</view>

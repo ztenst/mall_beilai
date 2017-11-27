@@ -1,0 +1,93 @@
+<view class="app index  ">
+    <view class="ele-container">
+        <view class="f-list box">
+            <view class="item" bindtap="toDetail">
+                <view class="pic">
+                    <image src="{{static_path+'/370x250.jpg'}}"  mode="scaleToFill"></image>
+                    
+                </view>
+                <view class="info">
+                    <view class="name ft-nowap">德克斯特柜子德克斯特柜子</view>
+                    <view class="brief ft-nowap">稳固耐用，节省空间，品质保证 1299元 1899元</view>
+                    <view class="price">
+                        1299元<text class="old">1899元</text>
+                    </view>
+                </view>
+            </view>
+            <view class="item">
+                <view class="pic">
+                    <image src="{{static_path+'/370x250-2.jpg'}}" mode="scaleToFill"></image>
+
+                </view>
+                <view class="info">
+                    <view class="name  ft-nowap">德克斯特柜子</view>
+                    <view class="brief ft-nowap">稳固耐用，节省空间，品质保证 1299元 1899元</view>
+                    <view class="price">
+                        1299元<text class="old">1899元</text>
+                    </view>
+                </view>
+            </view>
+            <view class="item">
+                <view class="pic">
+                    <image src="{{static_path+'/370x250.jpg'}}"  mode="scaleToFill"></image>
+                </view>
+                <view class="info">
+                    <view class="name ft-nowap">德克斯特柜子德克斯特柜子</view>
+                    <view class="brief ft-nowap">稳固耐用，节省空间，品质保证 1299元 1899元</view>
+                    <view class="price">
+                        1299元<text class="old">1899元</text>
+                    </view>
+                </view>
+            </view>
+            <view class="item">
+                <view class="pic">
+                    <image src="{{static_path+'/370x250-2.jpg'}}" mode="scaleToFill"></image>
+
+                </view>
+                <view class="info">
+                    <view class="name  ft-nowap">德克斯特柜子</view>
+                    <view class="brief ft-nowap">稳固耐用，节省空间，品质保证 1299元 1899元</view>
+                    <view class="price">
+                        1299元<text class="old">1899元</text>
+                    </view>
+                </view>
+            </view>
+            <view class="item">
+                <view class="pic">
+                    <image src="{{static_path+'/370x250.jpg'}}"  mode="scaleToFill"></image>
+
+                </view>
+                <view class="info">
+                    <view class="name ft-nowap">德克斯特柜子德克斯特柜子</view>
+                    <view class="brief ft-nowap">稳固耐用，节省空间，品质保证 1299元 1899元</view>
+                    <view class="price">
+                        1299元<text class="old">1899元</text>
+                    </view>
+                </view>
+            </view>
+            <view class="item">
+                <view class="pic">
+                    <image src="{{static_path+'/370x250-2.jpg'}}" mode="scaleToFill"></image>
+
+                </view>
+                <view class="info">
+                    <view class="name  ft-nowap">德克斯特柜子</view>
+                    <view class="brief ft-nowap">稳固耐用，节省空间，品质保证 1299元 1899元</view>
+                    <view class="price">
+                        1299元<text class="old">1899元</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+
+    </view>
+    <!--<view  class="content-box-empty">-->
+        <!--<view class="pic">-->
+            <!--<image src="../../images/empty.png"  mode="scaleToFill"/>-->
+        <!--</view>-->
+        <!--<view></view>-->
+        <!--<view class="msg">您还没有相关的订单</view>-->
+        <!--<view class="tip">可以去看看哪些活动想参加的</view>-->
+    <!--</view>-->
+
+</view>

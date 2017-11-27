@@ -1,0 +1,127 @@
+<view class="app my">
+
+    <view class="ele-container">
+        <view class="user-box">
+            <view class="bg">
+                <image src="../../images/bj.png"/>
+            </view>
+            <view class="user-info">
+
+                <view class="userimg box box-align-center box-pack-center">
+                    <view class="logo">
+                        <!--<image src="../../images/user.png"></image>-->
+                    </view>
+                </view>
+                <view class="usename">
+                    张三丰
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <view class="ele-container">
+        <view class="card-box box">
+            <view class="item" bindtap="toPage" data-type="brief">
+                <view class="content jianjie">
+                    <view class="pic">
+                        <image src="../../images/icon-brief.png"></image>
+                    </view>
+                    <view class="info">
+                        商家简介
+                    </view>
+                </view>
+            </view>
+            <view class="item ">
+                <view class="content contact" >
+                    <view class="pic">
+                        <image src="../../images/icon-contact.png"></image>
+                    </view>
+                    <view class="info">
+                        联系商家
+                    </view>
+                </view>
+
+            </view>
+            <view class="item" bindtap="toPage" data-type="order">
+                <view class="content contact">
+                    <view class="pic">
+                        <image src="../../images/icon-order.png"></image>
+                    </view>
+                    <view class="info">
+                        我的订单
+                    </view>
+                </view>
+
+            </view>
+            <view class="item" bindtap="toPage" data-type="collect">
+                <view class="content collect">
+                    <view class="pic">
+                        <image src="../../images/icon-collect.png"></image>
+                    </view>
+                    <view class="info">
+                        我的收藏
+                    </view>
+                </view>
+
+            </view>
+        </view>
+    </view>
+
+
+</view>
+<view class="tabBar box box-pack-center box-pack-between">
+    <navigator url="/pages/index/index" class="item">
+        <view class="cont">
+            <view class="pic">
+                <image src="../../images/icon-home.png"></image>
+            </view>
+            <view class="text">
+                首页
+            </view>
+        </view>
+    </navigator>
+    <navigator url="/pages/category/category" class="item">
+        <view class="cont">
+            <view class="pic">
+                <image src="../../images/icon-fenlei.png"></image>
+            </view>
+            <view class="text">
+                分类
+            </view>
+        </view>
+    </navigator>
+    <navigator  url="/pages/find/find" class="item">
+        <view class="cont">
+            <view class="pic">
+                <image src="../../images/icon-find.png"></image>
+            </view>
+            <view class="text">
+                发现
+            </view>
+        </view>
+    </navigator>
+    <navigator  url="/pages/case/case" class="item">
+        <view class="cont">
+            <view class="pic">
+                <image src="../../images/icon-case.png"></image>
+            </view>
+            <view class="text">
+                案例
+            </view>
+        </view>
+    </navigator>
+    <navigator  url="/pages/my/my" class="item">
+        <view class="cont">
+            <view class="pic">
+                <image src="../../images/hov-user.png"></image>
+            </view>
+            <view class="text on">
+                我的
+            </view>
+        </view>
+    </navigator>
+</view>
+
+
+
+

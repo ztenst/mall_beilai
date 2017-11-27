@@ -1,0 +1,53 @@
+
+<view class="tabBar box box-pack-center box-pack-between">
+    <view url="/pages/index/index" class="item"  bindtap="">
+        <view class="cont">
+            <view class="pic">
+                <image src="../../images/hov-home.png"></image>
+            </view>
+            <view class="text on">
+                首页
+            </view>
+        </view>
+    </view>
+    <view url="/pages/category/category" class="item">
+        <view class="cont">
+            <view class="pic">
+                <image src="../../images/icon-fenlei.png"></image>
+            </view>
+            <view class="text">
+                分类
+            </view>
+        </view>
+    </view>
+    <view url="/pages/find/find" class="item">
+        <view class="cont">
+            <view class="pic">
+                <image src="../../images/icon-find.png"></image>
+            </view>
+            <view class="text">
+                发现
+            </view>
+        </view>
+    </view>
+    <view url="/pages/case/case" class="item">
+        <view class="cont">
+            <view class="pic">
+                <image src="../../images/icon-case.png"></image>
+            </view>
+            <view class="text">
+                案例
+            </view>
+        </view>
+    </view>
+    <view url="/pages/my/my" class="item">
+        <view class="cont">
+            <view class="pic">
+                <image src="../../images/icon-user.png"></image>
+            </view>
+            <view class="text">
+                我的
+            </view>
+        </view>
+    </view>
+</view>

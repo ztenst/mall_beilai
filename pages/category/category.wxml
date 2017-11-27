@@ -1,0 +1,101 @@
+<import src="../../components/search_filter/search_filter.wxml"/>
+<import src="../../components/product_list/product_list.wxml"/>
+<view class="app index pdbm100">
+    <!--搜索筛选-->
+    <view class="search-top">
+        <template is="searchFilter" data="{{...$searchFilter }}"></template>
+    </view>
+
+    <view class="ele-container">
+        <view class="tongji">
+            <view class=" box box-align-center box-pack-between">
+                共{{total}}条数据
+            </view>
+        </view>
+    </view>
+
+    <view class="blank20"></view>
+
+    <!--列表-->
+    <scroll-view class="search-result" scroll-y="true"
+                 lower-threshold="100" bindscrolltolower="requestList" scroll-with-animation="true">
+        <block wx:if="{{!requested||max_page>0}}">
+
+            <template is="productList" data="{{product_list, ...$productList }}"></template>
+            <view class="loading-container box box-align-center box-pack-center" wx:if="{{loading}}">
+                <view class="loading-gif">
+                    <image src="../../images/loadingdetail.gif"></image>
+                </view>
+                <view class="loading-text">加载中...</view>
+            </view>
+        </block>
+
+        <!--无数据-->
+
+        <block wx:if="{{requested&&max_page===0}}">
+
+            <view  class="content-box-empty">
+                <view class="pic">
+                    <image src="../../images/empty.png"  mode="scaleToFill"/>
+                </view>
+                <view></view>
+                <view class="msg">暂无找到相关内容</view>
+                <view class="tip">看看别的吧</view>
+            </view>
+        </block>
+
+    </scroll-view>
+
+</view>
+<view class="tabBar box box-pack-center box-pack-between">
+    <navigator url="/pages/index/index" class="item">
+        <view class="cont">
+            <view class="pic">
+                <image src="../../images/icon-home.png"></image>
+            </view>
+            <view class="text">
+                首页
+            </view>
+        </view>
+    </navigator>
+    <navigator url="/pages/category/category" class="item">
+        <view class="cont">
+            <view class="pic">
+                <image src="../../images/hov-fenlei.png"></image>
+            </view>
+            <view class="text on">
+                分类
+            </view>
+        </view>
+    </navigator>
+    <navigator url="/pages/find/find" class="item">
+        <view class="cont">
+            <view class="pic">
+                <image src="../../images/icon-find.png"></image>
+            </view>
+            <view class="text">
+                发现
+            </view>
+        </view>
+    </navigator>
+    <navigator url="/pages/case/case" class="item">
+        <view class="cont">
+            <view class="pic">
+                <image src="../../images/icon-case.png"></image>
+            </view>
+            <view class="text">
+                案例
+            </view>
+        </view>
+    </navigator>
+    <navigator url="/pages/my/my" class="item">
+        <view class="cont">
+            <view class="pic">
+                <image src="../../images/icon-user.png"></image>
+            </view>
+            <view class="text">
+                我的
+            </view>
+        </view>
+    </navigator>
+</view>

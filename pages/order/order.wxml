@@ -1,0 +1,62 @@
+<view class="app order ">
+    <view class="ele-container">
+        <view class="order_list">
+            <view class="item box ">
+                <view class="pic">
+                    <image src="{{static_path+'/200x150.jpg'}}"></image>
+                </view>
+                <view class="info">
+                    <view class="title">
+                        雅美乐 1.6米书柜简易书架 木质防尘带 门储物收纳柜6层YSG402
+                    </view>
+                    <view class="desc box box-pack-between box-align-center">
+                        <view class="price">1299元</view>
+                        <view class="tag">联系商家</view>
+                    </view>
+                </view>
+            </view>
+            <view class="item box ">
+                <view class="pic">
+                    <image src="{{static_path+'/200x150.jpg'}}"></image>
+                </view>
+                <view class="info">
+                    <view class="title">
+                        雅美乐 1.6米书柜简易书架 木质防尘带 门储物收纳柜6层YSG402
+                    </view>
+                    <view class="desc box box-pack-between box-align-center">
+                        <view class="price">1299元</view>
+                        <view class="tag">联系商家</view>
+                    </view>
+                </view>
+            </view>
+            <view class="item box ">
+                <view class="pic">
+                    <image src="{{static_path+'/200x150.jpg'}}"></image>
+                </view>
+                <view class="info">
+                    <view class="title">
+                        雅美乐 1.6米书柜简易书架 木质防尘带 门储物收纳柜6层YSG402
+                    </view>
+                    <view class="desc box box-pack-between box-align-center">
+                        <view class="price">1299元</view>
+                        <view class="tag">联系商家</view>
+                    </view>
+                </view>
+            </view>
+            <view class="item box ">
+                <view class="pic">
+                    <image src="{{static_path+'/200x150.jpg'}}"></image>
+                </view>
+                <view class="info">
+                    <view class="title">
+                        雅美乐 1.6米书柜简易书架 木质防尘带 门储物收纳柜6层YSG402
+                    </view>
+                    <view class="desc">
+                        <view class="price">1299元</view>
+                        <view class="tag">联系商家</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
