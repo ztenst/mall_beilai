@@ -46,7 +46,9 @@
       width:370rpx;
       height:260rpx;
       margin-right:10rpx;
-      &:margin
+      &:last-child{
+        margin-right:0;
+      }
     }
     .body{
       margin-top:10rpx;

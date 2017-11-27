@@ -15,8 +15,8 @@
             <view class="pic">
                 <image src="../../images/icon-fenlei.png"></image>
             </view>
-            <view class="text">
-                分类
+            <view class="text">分类
+
             </view>
         </view>
     </view>
