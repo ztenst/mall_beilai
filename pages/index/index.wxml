@@ -56,56 +56,56 @@
 </view>
 
 
-<!--<view class="tabBar box box-pack-center box-pack-between">-->
-    <!--<navigator url="/pages/index/index" class="item">-->
-        <!--<view class="cont">-->
-            <!--<view class="pic">-->
-                <!--<image src="../../images/hov-home.png"></image>-->
-            <!--</view>-->
-            <!--<view class="text on">-->
-                <!--首页-->
-            <!--</view>-->
-        <!--</view>-->
-    <!--</navigator>-->
-    <!--<navigator url="/pages/category/category" class="item">-->
-        <!--<view class="cont">-->
-            <!--<view class="pic">-->
-                <!--<image src="../../images/icon-fenlei.png"></image>-->
-            <!--</view>-->
-            <!--<view class="text">-->
-                <!--分类-->
-            <!--</view>-->
-        <!--</view>-->
-    <!--</navigator>-->
-    <!--<navigator url="/pages/find/find" class="item">-->
-        <!--<view class="cont">-->
-            <!--<view class="pic">-->
-                <!--<image src="../../images/icon-find.png"></image>-->
-            <!--</view>-->
-            <!--<view class="text">-->
-                <!--发现-->
-            <!--</view>-->
-        <!--</view>-->
-    <!--</navigator>-->
-    <!--<navigator url="/pages/case/case" class="item">-->
-        <!--<view class="cont">-->
-            <!--<view class="pic">-->
-                <!--<image src="../../images/icon-case.png"></image>-->
-            <!--</view>-->
-            <!--<view class="text">-->
-                <!--案例-->
-            <!--</view>-->
-        <!--</view>-->
-    <!--</navigator>-->
-    <!--<navigator url="/pages/my/my" class="item">-->
-        <!--<view class="cont">-->
-            <!--<view class="pic">-->
-                <!--<image src="../../images/icon-user.png"></image>-->
-            <!--</view>-->
-            <!--<view class="text">-->
-                <!--我的-->
-            <!--</view>-->
-        <!--</view>-->
-    <!--</navigator>-->
-<!--</view>-->
+<view class="tabBar box box-pack-center box-pack-between">
+    <navigator url="/pages/index/index" class="item">
+        <view class="cont">
+            <view class="pic">
+                <image src="../../images/hov-home.png"></image>
+            </view>
+            <view class="text on">
+                首页
+            </view>
+        </view>
+    </navigator>
+    <navigator url="/pages/category/category" class="item">
+        <view class="cont">
+            <view class="pic">
+                <image src="../../images/icon-fenlei.png"></image>
+            </view>
+            <view class="text">
+                分类
+            </view>
+        </view>
+    </navigator>
+    <navigator url="/pages/find/find" class="item">
+        <view class="cont">
+            <view class="pic">
+                <image src="../../images/icon-find.png"></image>
+            </view>
+            <view class="text">
+                发现
+            </view>
+        </view>
+    </navigator>
+    <navigator url="/pages/case/case" class="item">
+        <view class="cont">
+            <view class="pic">
+                <image src="../../images/icon-case.png"></image>
+            </view>
+            <view class="text">
+                案例
+            </view>
+        </view>
+    </navigator>
+    <navigator url="/pages/my/my" class="item">
+        <view class="cont">
+            <view class="pic">
+                <image src="../../images/icon-user.png"></image>
+            </view>
+            <view class="text">
+                我的
+            </view>
+        </view>
+    </navigator>
+</view>
 
