@@ -1,10 +1,12 @@
 //index.js
 import {
     $swiper,
-    $productList
+    $productList,
+    $tabBar
 } from '../../components/wxcomponents'
 import config from '../../config'
 import api from '../../common/api'
+
 
 //获取应用实例
 const app = getApp();
@@ -22,6 +24,18 @@ Page({
     },
     onLoad: function () {
         let self = this;
+        /**
+         * 初始化tabBar组件
+         */
+        $tabBar.init({
+            tabIndex:1
+        });
+        /**
+         * 初始化产品列表组件
+         */
+        $productList.init();
+
+        //
         api.getIndex().then(resp => {
             let json = resp.data;
             if (json.status == 'success') {
@@ -38,6 +52,9 @@ Page({
             }
         });
 
+        /**
+         * 产品列表数据渲染
+         */
         self.requestList();
     },
 
@@ -75,9 +92,15 @@ Page({
         });
     },
 
-    toDetail() {
-        let url = "/pages/detail/detail";
-        app.goPage(url, null, false);
+    go_category(e){
+        let url = "/pages/category/category";
+        if(e){
+            let dataset =e.currentTarget.dataset;
+            app.goPage(url, {cid:dataset.id}, false);
+        }else{
+            app.goPage(url, null, false);
+        }
+
     }
 })
 ;

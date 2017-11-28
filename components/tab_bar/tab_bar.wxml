@@ -1,53 +1,55 @@
+<template name="tabBar">
 
-<view class="tabBar box box-pack-center box-pack-between">
-    <view url="/pages/index/index" class="item"  bindtap="">
-        <view class="cont">
-            <view class="pic">
-                <image src="../../images/hov-home.png"></image>
-            </view>
-            <view class="text on">
-                首页
+    <view class="tabBar box box-pack-center box-pack-between">
+        <view class="item" bindtap="{{go_tab}}" data-index="1">
+            <view class="cont">
+                <view class="pic">
+                    <image src="{{tabIndex==1?'../../images/hov-home.png':'../../images/icon-home.png'}}"></image>
+                </view>
+                <view class="text{{tabIndex==1?'on':''}}">
+                    首页
+                </view>
             </view>
         </view>
-    </view>
-    <view url="/pages/category/category" class="item">
-        <view class="cont">
-            <view class="pic">
-                <image src="../../images/icon-fenlei.png"></image>
-            </view>
-            <view class="text">分类
+        <view class="item" bindtap="{{go_tab}}" data-index="2">
+            <view class="cont">
+                <view class="pic">
+                    <image src="{{tabIndex==2?'../../images/hov-fenlei.png':' ../../images/icon-fenlei.png'}}"></image>
+                </view>
+                <view class="text {{tabIndex==2?'on':''}}">分类
 
+                </view>
+            </view>
+        </view>
+        <view class="item" bindtap="{{go_tab}}" data-index="3">
+            <view class="cont">
+                <view class="pic">
+                    <image src="{{tabIndex==3?'../../images/hov-find.png':'../../images/icon-find.png'}}"></image>
+                </view>
+                <view class="text {{tabIndex==3?'on':''}}">
+                    发现
+                </view>
+            </view>
+        </view>
+        <view class="item" bindtap="{{go_tab}}" data-index="4">
+            <view class="cont">
+                <view class="pic">
+                    <image src="{{tabIndex==4?'../../images/hov-case.png':'../../images/icon-case.png'}}"></image>
+                </view>
+                <view class="text {{tabIndex==4?'on':''}}">
+                    案例
+                </view>
+            </view>
+        </view>
+        <view class="item" bindtap="{{go_tab}}" data-index="5">
+            <view class="cont">
+                <view class="pic">
+                    <image src="{{tabIndex==5?'../../images/hov-user.png':'../../images/icon-user.png'}}"></image>
+                </view>
+                <view class="text {{tabIndex==5?'on':''}}">
+                    我的
+                </view>
             </view>
         </view>
     </view>
-    <view url="/pages/find/find" class="item">
-        <view class="cont">
-            <view class="pic">
-                <image src="../../images/icon-find.png"></image>
-            </view>
-            <view class="text">
-                发现
-            </view>
-        </view>
-    </view>
-    <view url="/pages/case/case" class="item">
-        <view class="cont">
-            <view class="pic">
-                <image src="../../images/icon-case.png"></image>
-            </view>
-            <view class="text">
-                案例
-            </view>
-        </view>
-    </view>
-    <view url="/pages/my/my" class="item">
-        <view class="cont">
-            <view class="pic">
-                <image src="../../images/icon-user.png"></image>
-            </view>
-            <view class="text">
-                我的
-            </view>
-        </view>
-    </view>
-</view>
+</template>

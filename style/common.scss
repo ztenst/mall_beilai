@@ -86,6 +86,11 @@ a {
 .bg-color{
   background-color: $color_cool;
 }
+.bg-mianColor{
+  background-color: $color_scheme;
+}
+
+
 .ft-nowap{
   white-space: nowrap;
   overflow: hidden;
@@ -124,7 +129,7 @@ a {
 
 //empty-box
 .content-box-empty {
-  padding-top: 240rpx;
+  padding-top: 180rpx;
   text-align: center;
   color: $c-999;
   .pic{

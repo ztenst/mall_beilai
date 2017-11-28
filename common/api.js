@@ -80,6 +80,11 @@ const api = {
         let url = `${config.host}/api/product/list`;
         return getRequest(url, params)
     },
+    /*产品详细页*/
+    getProductInfo(params) {
+        let url = `${config.host}/api/product/info`;
+        return getRequest(url, params)
+    },
     /*产品类别*/
     getCates(params) {
         let url = `${config.host}/api/product/getCates`;
@@ -95,6 +100,7 @@ const api = {
         let url = `${config.host}/api/cus/list`;
         return getRequest(url, params)
     },
+
 
 
 };

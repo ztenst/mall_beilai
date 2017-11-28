@@ -1,4 +1,7 @@
 import Component from '../component'
+let app = getApp();
+
+const SCOPE = '$tabBar';
 
 export default {
     /**
@@ -6,48 +9,35 @@ export default {
      */
     setDefaults() {
         return {
-            timer: 1500,
-            text: ``,
-            success() {},
+            tabIndex:null
         }
     },
-    /**
-     * 显示toast组件
-     * @param {Object} opts 配置项
-     * @param {String} opts.type 提示类型
-     * @param {Number} opts.timer 提示延迟时间
-     * @param {String} opts.color 图标颜色
-     * @param {String} opts.text 提示文本
-     * @param {Function} opts.success 关闭后的回调函数
-     */
-    show(opts = {}) {
-        const options = Object.assign({}, this.setDefaults(), opts)
 
-
-        // 实例化组件
+    init(opts = {}) {
+        const options = Object.assign({}, this.setDefaults(), opts);
         const component = new Component({
-            scope: `$toast`,
+            scope: SCOPE,
             data: options,
             methods: {
-                /**
-                 * 隐藏
-                 */
-                hide(cb) {
-                    setTimeout(() => {
-                        this.setHidden()
-                        typeof cb === `function` && cb()
-                    }, options.timer)
-                },
-                /**
-                 * 显示
-                 */
-                show() {
-                    this.setVisible()
-                },
-            },
-        })
+                go_tab(e){
+                    let self =this,dataset = e.currentTarget.dataset,url='';
+                    if(dataset.index==1){
+                        url="/pages/index/index";
+                    }else if(dataset.index==2){
+                        url="/pages/category/category";
+                    }else if(dataset.index==3){
+                        url="/pages/find/find";
+                    }else if(dataset.index==4){
+                        url="/pages/case/case";
+                    }else if(dataset.index==5){
+                        url="/pages/my/my";
+                    }
+                    app.goPage(url,null,true)
+                }
+            }
 
-        component.show()
-        component.hide(opts.success)
-    },
+        });
+
+        return component;
+    }
 }

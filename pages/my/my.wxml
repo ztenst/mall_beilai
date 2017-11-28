@@ -1,4 +1,6 @@
-<view class="app my">
+<import src="../../components/tab_bar/tab_bar.wxml"/>
+
+<view class="app my pdbm100">
 
     <view class="ele-container">
         <view class="user-box">
@@ -9,7 +11,7 @@
 
                 <view class="userimg box box-align-center box-pack-center">
                     <view class="logo">
-                        <!--<image src="../../images/user.png"></image>-->
+                        <image src="../../images/user.png"></image>
                     </view>
                 </view>
                 <view class="usename">
@@ -69,58 +71,7 @@
 
 
 </view>
-<view class="tabBar box box-pack-center box-pack-between">
-    <navigator url="/pages/index/index" class="item">
-        <view class="cont">
-            <view class="pic">
-                <image src="../../images/icon-home.png"></image>
-            </view>
-            <view class="text">
-                首页
-            </view>
-        </view>
-    </navigator>
-    <navigator url="/pages/category/category" class="item">
-        <view class="cont">
-            <view class="pic">
-                <image src="../../images/icon-fenlei.png"></image>
-            </view>
-            <view class="text">
-                分类
-            </view>
-        </view>
-    </navigator>
-    <navigator  url="/pages/find/find" class="item">
-        <view class="cont">
-            <view class="pic">
-                <image src="../../images/icon-find.png"></image>
-            </view>
-            <view class="text">
-                发现
-            </view>
-        </view>
-    </navigator>
-    <navigator  url="/pages/case/case" class="item">
-        <view class="cont">
-            <view class="pic">
-                <image src="../../images/icon-case.png"></image>
-            </view>
-            <view class="text">
-                案例
-            </view>
-        </view>
-    </navigator>
-    <navigator  url="/pages/my/my" class="item">
-        <view class="cont">
-            <view class="pic">
-                <image src="../../images/hov-user.png"></image>
-            </view>
-            <view class="text on">
-                我的
-            </view>
-        </view>
-    </navigator>
-</view>
+<template is="tabBar" data="{{...$tabBar }}"></template>
 
 
 

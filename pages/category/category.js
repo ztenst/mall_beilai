@@ -1,7 +1,8 @@
 //category.js
 import {
     $searchFilter,
-    $productList
+    $productList,
+    $tabBar
 } from '../../components/wxcomponents'
 import config from '../../config'
 import api from '../../common/api'
@@ -25,6 +26,12 @@ Page({
     },
     onLoad: function (query) {
         let self = this;
+        /**
+         * 初始化tabBar组件
+         */
+        $tabBar.init({
+            tabIndex:2
+        });
         let _q = Object.assign({}, Util.decodeKeys(query));
 
         self.searchFilterInit(_q, false);
@@ -78,7 +85,6 @@ Page({
         });
 
         let params = Object.assign({},self.data.filters, {page: this.data.page});
-        console.log(params)
         api.getProductList(params).then(resp => {
             let json = resp.data;
             let list = json.data.list;

@@ -1,5 +1,6 @@
 <import src="../../components/search_filter/search_filter.wxml"/>
 <import src="../../components/product_list/product_list.wxml"/>
+<import src="../../components/tab_bar/tab_bar.wxml"/>
 <view class="app index pdbm100">
     <!--搜索筛选-->
     <view class="search-top">
@@ -13,8 +14,6 @@
             </view>
         </view>
     </view>
-
-    <view class="blank20"></view>
 
     <!--列表-->
     <scroll-view class="search-result" scroll-y="true"
@@ -47,55 +46,5 @@
     </scroll-view>
 
 </view>
-<view class="tabBar box box-pack-center box-pack-between">
-    <navigator url="/pages/index/index" class="item">
-        <view class="cont">
-            <view class="pic">
-                <image src="../../images/icon-home.png"></image>
-            </view>
-            <view class="text">
-                首页
-            </view>
-        </view>
-    </navigator>
-    <navigator url="/pages/category/category" class="item">
-        <view class="cont">
-            <view class="pic">
-                <image src="../../images/hov-fenlei.png"></image>
-            </view>
-            <view class="text on">
-                分类
-            </view>
-        </view>
-    </navigator>
-    <navigator url="/pages/find/find" class="item">
-        <view class="cont">
-            <view class="pic">
-                <image src="../../images/icon-find.png"></image>
-            </view>
-            <view class="text">
-                发现
-            </view>
-        </view>
-    </navigator>
-    <navigator url="/pages/case/case" class="item">
-        <view class="cont">
-            <view class="pic">
-                <image src="../../images/icon-case.png"></image>
-            </view>
-            <view class="text">
-                案例
-            </view>
-        </view>
-    </navigator>
-    <navigator url="/pages/my/my" class="item">
-        <view class="cont">
-            <view class="pic">
-                <image src="../../images/icon-user.png"></image>
-            </view>
-            <view class="text">
-                我的
-            </view>
-        </view>
-    </navigator>
-</view>
+
+<template is="tabBar" data="{{...$tabBar }}"></template>

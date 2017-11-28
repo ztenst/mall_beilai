@@ -1,36 +1,27 @@
 import Component from '../component'
 let app = getApp();
 
-const SCOPE = '$houseSearchList';
+const SCOPE = '$productList';
 
 export default {
     /**
      * 默认参数
      */
     setDefaults() {
-        return {
-            onFilter() {
-            } //回调方法
-        }
+        return {}
     },
 
     init(opts = {}) {
         const options = Object.assign({}, this.setDefaults(), opts);
+
         const component = new Component({
             scope: SCOPE,
             data: options,
             methods: {
-                filterCompany(e){
-                    let filters = {'company': '','companyname':""};
-                    let dataset = e.currentTarget.dataset;
-                    if (dataset.company) {
-                        filters = {'company': dataset.company.id,'companyname':dataset.company.name};
-                    }
-                    typeof options.onFilter === 'function' && options.onFilter(filters);
-                },
                 navigateDetail(e) {
                     let dataset = e.currentTarget.dataset;
-                    let url = '/pages/house_detail/house_detail?id=' + dataset.id;
+                    console.log(dataset);
+                    let url = '/pages/detail/detail?id=' + dataset.id;
                     app.goPage(url, null, false);
                 }
             }

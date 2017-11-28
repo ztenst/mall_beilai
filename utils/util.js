@@ -106,6 +106,33 @@ function isObjectEmpty(obj) {
     return Object.keys(obj).length === 0;
 }
 
+/**
+ * 把对象转成数组  如果 default 为真  加入一个默认值
+ * @param obj
+ * @param defaultObj
+ * @returns {Array}
+ */
+function objToArr(obj, defaultObj) {
+    var arr = [];
+    var key = Object.keys(obj);
+    var value = Object.values(obj);
+
+    for(var i=0;i<key.length;i++){
+        arr.push({
+            'label':key[i],
+            'value':value[i]
+        })
+    }
+    // if (this.isObjectEmpty(defaultObj)) {
+    //     arr.unshift({
+    //         key: defaultObj.key,
+    //         val: defaultObj.val
+    //     });
+    // };
+    return arr;
+}
+
+
 module.exports = {
     formatTime: formatTime,
     formatTime2: formatTime2,
@@ -114,5 +141,6 @@ module.exports = {
     query2Params: query2Params,
     decodeKeys: decodeKeys,
     filterEmpty: filterEmpty,
-    isObjectEmpty:isObjectEmpty
+    isObjectEmpty:isObjectEmpty,
+    objToArr:objToArr,
 }
