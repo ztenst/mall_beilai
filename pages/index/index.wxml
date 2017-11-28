@@ -1,13 +1,18 @@
 <import src="../../components/swiper/swiper.wxml"/>
 <import src="../../components/product_list/product_list.wxml"/>
+<import src="../../components/tab_bar/tab_bar.wxml"/>
 
 <view class="app index pdbm100">
-
+    <view class="index_search_bar bg-mianColor" bindtap="go_category">
+        <view class="search-box">
+            <view><text class="iconfont icon-sousuo"></text>搜索商品</view>
+        </view>
+    </view>
     <template is="swiper" data="{{imgUrls,...$swiper }}"></template>
 
     <view class="ele-container">
         <view class="index-nav box box-pack-between box-align-center">
-            <view class="item" wx:for="{{index.cates}}" wx:key="id">
+            <view class="item" wx:for="{{index.cates}}" wx:key="id" bindtap="go_category" data-id="{{item.id}}">
                 <image mode="scaleToFill" src="{{item.img}}"></image>
                 <text>{{item.name}}</text>
             </view>
@@ -55,57 +60,5 @@
 
 </view>
 
-
-<view class="tabBar box box-pack-center box-pack-between">
-    <navigator url="/pages/index/index" class="item">
-        <view class="cont">
-            <view class="pic">
-                <image src="../../images/hov-home.png"></image>
-            </view>
-            <view class="text on">
-                首页
-            </view>
-        </view>
-    </navigator>
-    <navigator url="/pages/category/category" class="item">
-        <view class="cont">
-            <view class="pic">
-                <image src="../../images/icon-fenlei.png"></image>
-            </view>
-            <view class="text">
-                分类
-            </view>
-        </view>
-    </navigator>
-    <navigator url="/pages/find/find" class="item">
-        <view class="cont">
-            <view class="pic">
-                <image src="../../images/icon-find.png"></image>
-            </view>
-            <view class="text">
-                发现
-            </view>
-        </view>
-    </navigator>
-    <navigator url="/pages/case/case" class="item">
-        <view class="cont">
-            <view class="pic">
-                <image src="../../images/icon-case.png"></image>
-            </view>
-            <view class="text">
-                案例
-            </view>
-        </view>
-    </navigator>
-    <navigator url="/pages/my/my" class="item">
-        <view class="cont">
-            <view class="pic">
-                <image src="../../images/icon-user.png"></image>
-            </view>
-            <view class="text">
-                我的
-            </view>
-        </view>
-    </navigator>
-</view>
+<template is="tabBar" data="{{...$tabBar }}"></template>
 

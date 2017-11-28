@@ -1,7 +1,8 @@
 //index.js
 import {
     $swiper,
-    $productList
+    $productList,
+    $tabBar
 } from '../../components/wxcomponents'
 import config from '../../config'
 import api from '../../common/api'
@@ -22,6 +23,13 @@ Page({
     },
     onLoad: function () {
         let self = this;
+        /**
+         * 初始化tabBar组件
+         */
+        $tabBar.init({
+            tabIndex:1
+        });
+        //
         api.getIndex().then(resp => {
             let json = resp.data;
             if (json.status == 'success') {
@@ -75,9 +83,15 @@ Page({
         });
     },
 
-    toDetail() {
-        let url = "/pages/detail/detail";
-        app.goPage(url, null, false);
+    go_category(e){
+        let url = "/pages/category/category";
+        if(e){
+            let dataset =e.currentTarget.dataset;
+            app.goPage(url, {cid:dataset.id}, false);
+        }else{
+            app.goPage(url, null, false);
+        }
+
     }
 })
 ;

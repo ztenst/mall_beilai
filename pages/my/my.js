@@ -1,5 +1,8 @@
 //index.js
 //获取应用实例
+import {
+    $tabBar
+} from '../../components/wxcomponents'
 const app = getApp();
 
 Page({
@@ -8,7 +11,15 @@ Page({
      */
     data: {},
 
-    onLoad: function () {},
+    onLoad: function () {
+
+        /**
+         * 初始化tabBar组件
+         */
+        $tabBar.init({
+            tabIndex:5
+        });
+    },
 
     toPage(e) {
         let type = e.currentTarget.dataset.type, url = "";

@@ -9,9 +9,9 @@ export default {
 		return {
 			className: undefined,
 	    	titleText: undefined,
-			buttons: [], 
-			buttonClicked() {}, 
-			cancelText: `取消`, 
+			buttons: [],
+			buttonClicked() {},
+			cancelText: `取消`,
 			cancel() {},
             onActionSheetClick(){}
 		}

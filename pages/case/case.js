@@ -1,4 +1,7 @@
 //case.js
+import {
+    $tabBar
+} from '../../components/wxcomponents'
 import config from '../../config'
 import api from '../../common/api'
 
@@ -18,7 +21,12 @@ Page({
     },
     onLoad: function () {
         let  self = this;
-
+        /**
+         * 初始化tabBar组件
+         */
+        $tabBar.init({
+            tabIndex:4
+        });
         self.requestList();
     },
 

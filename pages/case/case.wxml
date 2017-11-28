@@ -1,3 +1,5 @@
+<import src="../../components/tab_bar/tab_bar.wxml"/>
+
 <view class="app case bg-color ">
     <view class="ele-container " wx:if="{{list.length>0}}">
         <view class="case_list box">
@@ -21,55 +23,4 @@
         <view class="loading-text">加载中...</view>
     </view>
 </view>
-<view class="tabBar box box-pack-center box-pack-between">
-    <navigator url="/pages/index/index" class="item">
-        <view class="cont">
-            <view class="pic">
-                <image src="../../images/icon-home.png"></image>
-            </view>
-            <view class="text">
-                首页
-            </view>
-        </view>
-    </navigator>
-    <navigator url="/pages/category/category" class="item">
-        <view class="cont">
-            <view class="pic">
-                <image src="../../images/icon-fenlei.png"></image>
-            </view>
-            <view class="text">
-                分类
-            </view>
-        </view>
-    </navigator>
-    <navigator url="/pages/find/find" class="item">
-        <view class="cont">
-            <view class="pic">
-                <image src="../../images/icon-find.png"></image>
-            </view>
-            <view class="text">
-                发现
-            </view>
-        </view>
-    </navigator>
-    <navigator url="/pages/case/case" class="item">
-        <view class="cont">
-            <view class="pic">
-                <image src="../../images/hov-case.png"></image>
-            </view>
-            <view class="text on">
-                案例
-            </view>
-        </view>
-    </navigator>
-    <navigator url="/pages/my/my" class="item">
-        <view class="cont">
-            <view class="pic">
-                <image src="../../images/icon-user.png"></image>
-            </view>
-            <view class="text">
-                我的
-            </view>
-        </view>
-    </navigator>
-</view>
+<template is="tabBar" data="{{...$tabBar }}"></template>

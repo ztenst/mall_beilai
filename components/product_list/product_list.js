@@ -1,7 +1,7 @@
 import Component from '../component'
 let app = getApp();
 
-const SCOPE = '$houseSearchList';
+const SCOPE = '$productList';
 
 export default {
     /**
@@ -20,17 +20,10 @@ export default {
             scope: SCOPE,
             data: options,
             methods: {
-                filterCompany(e){
-                    let filters = {'company': '','companyname':""};
-                    let dataset = e.currentTarget.dataset;
-                    if (dataset.company) {
-                        filters = {'company': dataset.company.id,'companyname':dataset.company.name};
-                    }
-                    typeof options.onFilter === 'function' && options.onFilter(filters);
-                },
+
                 navigateDetail(e) {
                     let dataset = e.currentTarget.dataset;
-                    let url = '/pages/house_detail/house_detail?id=' + dataset.id;
+                    let url = '/pages/detail/detail?id=' + dataset.id;
                     app.goPage(url, null, false);
                 }
             }
