@@ -1,8 +1,8 @@
 <template name="productList">
     <view class="ele-container" wx:if="{{product_list.length>0}}">
-        <view class="f-list box" >
-            <block wx:for="{{product_list}}" wx:key="id">
-                <view class="item" catchtap="{{navigateDetail}}"  data-id="{{item.id}}">
+        <view class="f-list box">
+            <block wx:for="{{product_list}}" wx:key="id" >
+                <view class="item" bindtap="{{navigateDetail}}" data-id="{{item.id}}">
                     <view class="pic">
                         <image src="{{item.image}}" mode="scaleToFill"></image>
                         <view class="tag" wx:if="{{item.old_price-item.price>0}}">

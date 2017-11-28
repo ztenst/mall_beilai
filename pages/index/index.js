@@ -7,6 +7,7 @@ import {
 import config from '../../config'
 import api from '../../common/api'
 
+
 //获取应用实例
 const app = getApp();
 
@@ -29,6 +30,11 @@ Page({
         $tabBar.init({
             tabIndex:1
         });
+        /**
+         * 初始化产品列表组件
+         */
+        $productList.init();
+
         //
         api.getIndex().then(resp => {
             let json = resp.data;
@@ -46,6 +52,9 @@ Page({
             }
         });
 
+        /**
+         * 产品列表数据渲染
+         */
         self.requestList();
     },
 

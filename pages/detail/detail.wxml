@@ -1,25 +1,27 @@
-<view class="app detail">
+<import src="../../components/swiper/swiper.wxml"/>
 
-    <view class="ele-container">
-        <swiper circular="true" duration="750" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}"
-                interval="{{interval}}" duration="{{duration}}" class="banner">
-            <block wx:for="{{banner_list}}" wx:key="">
-                <swiper-item>
-                    <image class="slide-image" src="{{item.url}}" style="height:826rpx;"></image>
-                </swiper-item>
-            </block>
-        </swiper>
-    </view>
+<view class="app detail">
+    <template is="swiper" data="{{imgUrls,...$swiper }}"></template>
+    <!--<view class="ele-container">-->
+        <!--<swiper circular="true" duration="750" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}"-->
+                <!--interval="{{interval}}" duration="{{duration}}" class="banner">-->
+            <!--<block wx:for="{{banner_list}}" wx:key="">-->
+                <!--<swiper-item>-->
+                    <!--<image class="slide-image" src="{{item.url}}" style="height:826rpx;"></image>-->
+                <!--</swiper-item>-->
+            <!--</block>-->
+        <!--</swiper>-->
+    <!--</view>-->
 
     <view class="ele-container">
         <view class="titleView">
-            <view class="name">几度灰/27°C多功能组合柜</view>
+            <view class="name">{{productInfo.name}}</view>
             <view class="desc">
                 稳固耐用，节省空间，品质保证。享有10年品质保证，详情请见质 保手册。 背面经过表面处理，可放置
             </view>
             <view class="price">
-                1299元
-                <text class="old">1899元</text>
+                {{productInfo.price}}元
+                <text class="old">{{productInfo.old_price}}元</text>
             </view>
         </view>
     </view>
@@ -36,94 +38,14 @@
                 <view class="views" wx:if="{{tabIndex==1}}">
                     <view class="table">
                          <view class="tbody">
-                             <view class="tr box box-pack-center box-align-center">
+                             <view class="tr box box-pack-center box-align-center" wx:for="{{productInfo.params}}">
                                  <view class="th">
-                                     商品编号
+                                     {{item.label}}
                                  </view>
                                  <view class="td">
-                                    13775015520
+                                     {{item.value}}
                                  </view>
                              </view>
-                             <view class="tr box box-pack-center box-align-center">
-                                 <view class="th">
-                                     形状
-                                 </view>
-                                 <view class="td">
-                                     L形
-                                 </view>
-                             </view>
-                             <view class="tr box box-pack-center box-align-center">
-                                 <view class="th">
-                                     台板厚度
-                                 </view>
-                                 <view class="td">
-                                     20mm
-                                 </view>
-                             </view>
-                             <view class="tr box box-pack-center box-align-center">
-                                 <view class="th">
-                                     环保等级
-                                 </view>
-                                 <view class="td">
-                                     E1
-                                 </view>
-                             </view>
-                              <view class="tr box box-pack-center box-align-center">
-                                 <view class="th">
-                                     保修年限
-                                 </view>
-                                 <view class="td">
-                                     其它
-                                 </view>
-                             </view>
-                             <view class="tr box box-pack-center box-align-center">
-                                 <view class="th">
-                                     类别
-                                 </view>
-                                 <view class="td">
-                                     定制橱柜
-                                 </view>
-                             </view>
-                             <view class="tr box box-pack-center box-align-center">
-                                 <view class="th">
-                                     门板材质
-                                 </view>
-                                 <view class="td">
-                                     其它
-                                 </view>
-                             </view>
-                             <view class="tr box box-pack-center box-align-center">
-                                 <view class="th">
-                                     台面材质
-                                 </view>
-                                 <view class="td">
-                                     石英石
-                                 </view>
-                             </view>
-<view class="tr box box-pack-center box-align-center">
-                                 <view class="th">
-                                     风格
-                                 </view>
-                                 <view class="td">
-                                     现代简约
-                                 </view>
-                             </view><view class="tr box box-pack-center box-align-center">
-                                 <view class="th">
-                                     价格
-                                 </view>
-                                 <view class="td">
-                                     10000-19999
-                                 </view>
-                             </view>
-                             <view class="tr box box-pack-center box-align-center">
-                                 <view class="th">
-                                     柜体材质
-                                 </view>
-                                 <view class="td">
-                                     三聚氰胺板
-                                 </view>
-                             </view>
-
                          </view>
                     </view>
                 </view>
