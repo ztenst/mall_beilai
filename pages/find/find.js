@@ -29,7 +29,14 @@ Page({
         });
         self.requestList();
     },
-
+    /**
+     * 跳转发现文章详情页
+     * @param e
+     */
+    go_article(e){
+        let dataset = e.currentTarget.dataset,url='/pages/article/article';
+        app.goPage(url,dataset,false);
+    },
     requestList() {
         let self = this;
         let state = self.data;

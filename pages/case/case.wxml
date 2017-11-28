@@ -3,8 +3,8 @@
 <view class="app case bg-color ">
     <view class="ele-container " wx:if="{{list.length>0}}">
         <view class="case_list box">
-            <block wx:for="{{list}}" wx:key="id" data-id="{{item.id}}">
-                <view class="item">
+            <block wx:for="{{list}}" wx:key="id" >
+                <view class="item" bindtap="go_article" data-id="{{item.id}}" data-type="case">
                     <view class="pic">
                         <image src="{{item.image}}"></image>
                     </view>

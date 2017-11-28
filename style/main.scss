@@ -578,38 +578,8 @@
           }
         }
         .imgText_list{
-          .item{
-            width:100%;
-            height:480rpx;
-            position: relative;
-            margin-bottom:30rpx;
-            image{
-              width: 100%;
-              height:100%;
-              display: block;
-              vertical-align: top;
-            }
-            .text{
-              position:absolute;
-              height:50rpx;
-              line-height: 50rpx;
-              background:rgba(0,0,0,0.4);
-              color:#fff;
-              font-size:32rpx;
-              width:208rpx;
-              padding:0 20rpx;
-              &.t-left{
-                left:0;
-                bottom:6rpx;
-                text-align: right;
-              }
-              &.t-right{
-                right:0;
-                top:6rpx;
-                text-align: left;
-              }
-            }
-          }
+          padding:20rpx 24rpx;
+          line-height: 38rpx;
         }
       }
     }
@@ -651,6 +621,34 @@
     }
   }
 }
+
+//article
+.article{
+     padding:0 24rpx;
+    .articleIndex-header{
+      padding:30rpx 0;
+      .title{
+        text-align: center;
+        font-size:36rpx;
+        color:#333;
+        line-height: 44rpx;
+        font-synthesis: style;
+      }
+      .author-box{
+        margin-top:10rpx;
+        font-size:24rpx;
+        color:$c-999;
+        line-height: 44rpx;
+        .author{
+          max-width:60%;
+        }
+        .bull{
+          margin:0 12rpx;
+        }
+      }
+    }
+}
+
 
 //order
 .order{

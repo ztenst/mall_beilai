@@ -100,6 +100,16 @@ const api = {
         let url = `${config.host}/api/cus/list`;
         return getRequest(url, params)
     },
+    /*发现详细页*/
+    getFindInfo(params) {
+        let url = `${config.host}/api/find/info`;
+        return getRequest(url, params)
+    },
+    /*案例详细页*/
+    getCaseInfo(params) {
+        let url = `${config.host}/api/cus/info`;
+        return getRequest(url, params)
+    },
 
 
 
