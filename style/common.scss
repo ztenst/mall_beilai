@@ -10,6 +10,7 @@ $c-999: #999;
 $borderColorE6: #e6e6e6;
 $borderRadius: 5px;
 $static_path: '';
+$borderColor: #e6e6e6;
 
 //flex
 .box{display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-flex-wrap:nowrap;-ms-flex-wrap:nowrap;flex-wrap:nowrap}
@@ -86,10 +87,16 @@ a {
 .bg-color{
   background-color: $color_cool;
 }
+.c-fff{
+  color:#fff;
+}
+.c-ccc{
+  color:#ccc;
+}
 .bg-mianColor{
   background-color: $color_scheme;
 }
-
+.plt24{padding-left:24rpx;}
 
 .ft-nowap{
   white-space: nowrap;
@@ -191,3 +198,24 @@ a {
 }
 
 
+//wux toast
+.weui-toast{
+  position:fixed;
+  z-index:100;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  .weui-toast__content {
+    width:auto;
+    height:auto;
+    padding: 26rpx;
+    border-radius: 10rpx;
+    background:none;
+    background-color: rgba(0,0,0,.65);
+    color: #fff;
+    text-align: center;
+    text-overflow: ellipsis;
+    font-size: 30rpx;
+  }
+}

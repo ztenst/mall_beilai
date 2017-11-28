@@ -15,7 +15,6 @@ Page({
     data: {
         static_path: config.static_path,
 
-        kw:'',
         page: 0,
         max_page: 0,
         scrollTop: 100,

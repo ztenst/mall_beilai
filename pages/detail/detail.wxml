@@ -2,13 +2,15 @@
 <import src="../../components/detail_content/detail_content.wxml"/>
 
 <view class="app detail">
-    <template is="swiper" data="{{imgUrls,...$swiper }}"></template>
+    <view class="ele-container" wx:if="{{productInfo.e}}">
+        <template is="swiper" data="{{imgUrls,...$swiper }}"></template>
+    </view>
 
     <view class="ele-container">
         <view class="titleView">
             <view class="name">{{productInfo.name}}</view>
             <view class="desc">
-               {{productInfo.shortdes}}
+                {{productInfo.shortdes}}
             </view>
             <view class="price">
                 {{productInfo.price}}元
@@ -54,10 +56,10 @@
         <view class="a">
             <view class="iconfont icon-shoucang2"></view>
         </view>
-        <view class="btn contactShop`">
+        <view class="btn contactShop">
             <view class="p">联系商家</view>
         </view>
-        <view class="btn buyNow">
+        <view class="btn buyNow" bindtap="addOrder" data-id="{{productInfo.id}}">
             <view class="p">提交订单</view>
         </view>
     </view>

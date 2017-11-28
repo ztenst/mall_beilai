@@ -121,6 +121,16 @@ export default {
                 requestOptions() {
                     let self = this;
                     let ajaxs = [];
+                    let data = this.getComponentData();
+
+                    if(data.filters.kw){
+                        self.setData({
+                            [`${SCOPE}.focused`]: true,
+                            [`${SCOPE}.kw`]: data.filters.kw,
+                            [`${SCOPE}.kw_input`]: data.filters.kw,
+                        });
+                    }
+
                     //获取搜索顶部的tags数据
                     ajaxs.push(api.getCates().then(resp => {
                         let json = resp.data.data;

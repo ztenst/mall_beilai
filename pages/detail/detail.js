@@ -1,6 +1,6 @@
 //detail.js
 import {
-    $swiper,$detailContent
+    $swiper, $detailContent
 } from '../../components/wxcomponents'
 
 //获取应用实例
@@ -12,7 +12,7 @@ const app = getApp();
 Page({
     data: {
 
-        tabIndex:1,
+        tabIndex: 1,
         product_id: '',
 
     },
@@ -79,5 +79,10 @@ Page({
         self.setData({
             tabIndex: dataset.index
         })
+    },
+    addOrder(e) {
+        let dataset = e.currentTarget.dataset, url = '/pages/add_order/add_order';
+        app.goPage(url, {id: dataset.id}, false);
+
     }
 });

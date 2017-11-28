@@ -15,13 +15,35 @@
       border-radius: 29rpx;
       font-size: 26rpx;
       color:#fff;
-      text-align: center;
+      .text-box{
+        text-align: center;
+      }
       .iconfont{
         font-size: 30rpx;
          vertical-align: middle;
         margin-right:10rpx;
       }
+
+      .input-container {
+        line-height: 58rpx;
+        >view {
+          position: relative;
+          padding:0 60rpx;
+        }
+        input {
+          display: block;
+          height: 58rpx;
+        }
+        .icon-sousuo {
+          position: absolute;
+          color: #ccc;
+          left: 24rpx;
+          top: 0;
+        }
+
+      }
     }
+
   }
   .banner{
     height: 376rpx!important;
@@ -482,12 +504,17 @@
 //detail
 .detail{
   padding-bottom:100rpx;
+  .swiper{
+    width: 100%;
+  }
+
+
   .banner{
-    height: 826rpx!important;
+    min-height: 376rpx!important;
     .slide-image{
-      display: block;
-      height:100%;
-      width:100%;
+      display: block!important;
+      min-height:826rpx!important;
+      width:100%!important;
     }
   }
 
@@ -698,6 +725,7 @@
   }
 }
 
+//brief
 .brief{
   .banner{
     width: 100%;
@@ -748,5 +776,113 @@
       }
     }
   }
+}
+
+//add_order
+.add_order{
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  .plt24{
+    .row{
+      padding-left:0;
+      .col-t{
+        color: #333;
+        font-size:30rpx;
+      }
+    }
+  }
+  .line {
+    display: block;
+    line-height: 98rpx;
+    height: 98rpx;
+    border-bottom: 1px solid $borderColor;
+    vertical-align: middle;
+    position: relative;
+    &.nbtm{
+      border-bottom: 0;
+    }
+    label {
+      width: 100rpx;
+      height: 98rpx;
+
+      position: absolute;
+      left: 0rpx;
+      top: 0;
+      color: #333;
+      font-size:30rpx;
+    }
+    .xing{
+      height:98rpx;
+      display: inline-block;
+      margin-right:60rpx;
+    }
+    .input, input,.raDio {
+      height: 98rpx;
+      display: inline-block;
+      vertical-align: middle;
+      &.longinput{
+        width:400rpx;
+      }
+      &.shortinput{
+        width:80rpx;
+      }
+    }
+    .ml100{
+      display: inline-block;
+      margin-left: 100rpx;
+    }
+    .w300{
+      width:600rpx;
+    }
+
+
+    .switchSize{
+      text-align: right;
+      position: absolute;
+      top: 0;
+      right:0;
+      transform:scale(.7);
+    }
+
+
+    &.longlab{
+      label{
+        width:200rpx;
+      }
+      .raDio{
+        margin-left:200rpx;
+        .radioSize{
+          transform:scale(.6);
+        }
+      }
+    }
+
+  }
+
+  .big-btn{
+      position: fixed;
+      bottom:0;
+      box-sizing:border-box;
+      width:100%;
+      padding:24rpx;
+      -webkit-box-shadow:0px -4px 4px rgba(0,0,0,.038);
+      box-shadow: 0px -4px 4px rgba(0,0,0,.038);
+      .btnBaoBei{
+        width:100%;
+        height:88rpx;
+        //background-color: $color_scheme;
+        color:$color_scheme;
+        font-size:34rpx;
+        border-radius: 10rpx;
+      }
+      &.no-fixed{
+        position: relative;
+        margin-top:50rpx;
+        box-shadow:none;
+        -webkit-box-shadow:none;
+      }
+    }
+
 }
 

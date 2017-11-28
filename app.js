@@ -1,6 +1,47 @@
 //app.js
+import api from './common/api'
+
 App({
     onLaunch: function () {
+    },
+    /**
+     * 获取openid 
+     * @returns {Promise}
+     */
+    getUserOpenId: function () {
+        var self = this;
+        //不要在30天后才更换openid-尽量提前10分钟更新 
+        return new Promise((resolve, reject) => {
+            //  console.log(Object.keys(self.globalData.userInfo).length != 0)
+            // if (Object.keys(self.globalData.userInfo).length != 0) {
+            //     resolve(self.globalData);
+            // } else {
+            wx.login({
+                success: function (loginres) {
+                    wx.getUserInfo({
+                        success: function (resuserinfo) {
+                            self.globalData.userInfo = resuserinfo.userInfo;
+                            api.getOpenId({code: loginres.code}).then(res => {
+                                let data = res.data;
+                                self.globalData.wxData=data;
+                                if (!data.uid) {
+                                    let params = {
+                                        openid: data.open_id,
+                                        name: resuserinfo.userInfo.nickName,
+                                        sex: resuserinfo.userInfo.gender,
+                                        pro: resuserinfo.userInfo.province,
+                                        city: resuserinfo.userInfo.city
+                                    };
+                                    api.indexSub(params).then(res => {});
+                                }
+                                // resolve(data);
+                            })
+                        }
+                    });
+                }
+            })
+            // }
+        });
     },
     /**
      * 获取个人信息
@@ -49,6 +90,7 @@ App({
         }
     },
     globalData: {
-        userInfo: null
+        userInfo: null,
+        wxData:null
     }
 })

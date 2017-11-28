@@ -110,7 +110,21 @@ const api = {
         let url = `${config.host}/api/cus/info`;
         return getRequest(url, params)
     },
-
+    /*获取openid*/
+    getOpenId(params) {
+        let url = `${config.host}/api/index/getOpenId`
+        return getRequest(url, params)
+    },
+    /*存用户信息*/
+    indexSub(params) {
+        let url = `${config.host}/api/index/setUser`
+        return postRequest(url, params)
+    },
+    /*提交订单*/
+    addOrder(params) {
+        let url = `${config.host}/api/product/addOrder`
+        return postRequest(url, params)
+    },
 
 
 };
