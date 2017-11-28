@@ -79,6 +79,18 @@
 					"name": "brief",
 					"pathName": "pages/brief/brief",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "article",
+					"pathName": "pages/article/article",
+					"query": "id=1"
+				},
+				{
+					"id": -1,
+					"name": "article",
+					"pathName": "pages/article/article",
+					"query": "id=29&type=find"
 				}
 			]
 		}

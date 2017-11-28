@@ -1,51 +1,31 @@
 //app.js
 App({
-  onLaunch: function () {
-    // 展示本地存储能力
-    var logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
-
-    // 登录
-    wx.login({
-      success: resw => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
-        //   wx.getUserInfo({
-        //       success: res => {
-        //           console.log(res.userInfo)
-        //           // 可以将 res 发送给后台解码出 unionId
-        //           this.globalData.userInfo = res.userInfo
-        //
-        //           // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-        //           // 所以此处加入 callback 以防止这种情况
-        //           if (this.userInfoReadyCallback) {
-        //               this.userInfoReadyCallback(res)
-        //           }
-        //       }
-        //   })
-      }
-    })
-    // 获取用户信息
-    // wx.getSetting({
-    //   success: res => {
-    //     if (res.authSetting['scope.userInfo']) {
-    //       // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
-    //       wx.getUserInfo({
-    //         success: res => {
-    //           // 可以将 res 发送给后台解码出 unionId
-    //           this.globalData.userInfo = res.userInfo
-    //
-    //           // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-    //           // 所以此处加入 callback 以防止这种情况
-    //           if (this.userInfoReadyCallback) {
-    //             this.userInfoReadyCallback(res)
-    //           }
-    //         }
-    //       })
-    //     }
-    //   }
-    // })
-  },
+    onLaunch: function () {
+    },
+    /**
+     * 获取个人信息
+     * @returns {Promise}
+     */
+    getUserInfo: function () {
+        var self = this
+        return new Promise((resolve, reject) => {
+            if (self.globalData.userInfo) {
+                resolve(self.globalData.userInfo)
+            } else {
+                //调用登录接口
+                wx.login({
+                    success: function () {
+                        wx.getUserInfo({
+                            success: function (res) {
+                                self.globalData.userInfo = res.userInfo;
+                                resolve(res.userInfo)
+                            }
+                        })
+                    }
+                })
+            }
+        })
+    },
     /**
      * 页面跳转 pageUrl 页面路径，isRedirectTo 是否强制使用redirectTo来跳转
      * 需要注意的是 传递页面的参数时只能是字字符串
@@ -53,7 +33,7 @@ App({
      * @param data
      * @param isRedirectTo
      */
-    goPage: function (pageUrl, data,isRedirectTo) {
+    goPage: function (pageUrl, data, isRedirectTo) {
         let length = getCurrentPages().length;
         //如果传了data 就做参数的拼接
         if (data != null) {
@@ -62,13 +42,13 @@ App({
                 .join('&');
             pageUrl = pageUrl + "?" + param;
         }
-        if(isRedirectTo || length>=5){
+        if (isRedirectTo || length >= 5) {
             wx.redirectTo({url: pageUrl})
-        }else {
+        } else {
             wx.navigateTo({url: pageUrl});
         }
     },
-  globalData: {
-    userInfo: null
-  }
+    globalData: {
+        userInfo: null
+    }
 })

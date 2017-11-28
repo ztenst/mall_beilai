@@ -1,8 +1,8 @@
 //detail.js
 import {
-    $swiper,
+    $swiper,$detailContent
 } from '../../components/wxcomponents'
-import config from '../../config'
+
 //获取应用实例
 import api from '../../common/api'
 import Util from '../../utils/util'
@@ -11,7 +11,7 @@ const app = getApp();
 
 Page({
     data: {
-        static_path: config.static_path,
+
         tabIndex:1,
         product_id: '',
 
@@ -34,7 +34,7 @@ Page({
             if (json.status == 'success') {
                 wx.setNavigationBarTitle({title: json.data.name});//设置导航条标题
                 json.data.params = Util.objToArr(json.data.params);//产品参数返回值格式转换
-                console.log(json.data)
+
                 self.setData({
                     productInfo: json.data,
                     imgUrls: json.data.images,
@@ -48,6 +48,14 @@ Page({
                     interval: 3000,
                     duration: 100,
                 });
+
+                /**
+                 *初始化图文详情组件
+                 */
+                $detailContent.init('news', {
+                    content: json.data.content.trim()
+                });
+
             } else {
                 wx.showToast({
                     title: json.msg,
@@ -62,7 +70,10 @@ Page({
             }
         });
     },
-
+    /**
+     *tab(产品参数和图文详情)按钮切换
+     * @param e
+     */
     tabFun(e) {
         let self = this, dataset = e.currentTarget.dataset;
         self.setData({

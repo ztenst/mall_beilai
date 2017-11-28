@@ -1,23 +1,14 @@
 <import src="../../components/swiper/swiper.wxml"/>
+<import src="../../components/detail_content/detail_content.wxml"/>
 
 <view class="app detail">
     <template is="swiper" data="{{imgUrls,...$swiper }}"></template>
-    <!--<view class="ele-container">-->
-        <!--<swiper circular="true" duration="750" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}"-->
-                <!--interval="{{interval}}" duration="{{duration}}" class="banner">-->
-            <!--<block wx:for="{{banner_list}}" wx:key="">-->
-                <!--<swiper-item>-->
-                    <!--<image class="slide-image" src="{{item.url}}" style="height:826rpx;"></image>-->
-                <!--</swiper-item>-->
-            <!--</block>-->
-        <!--</swiper>-->
-    <!--</view>-->
 
     <view class="ele-container">
         <view class="titleView">
             <view class="name">{{productInfo.name}}</view>
             <view class="desc">
-                稳固耐用，节省空间，品质保证。享有10年品质保证，详情请见质 保手册。 背面经过表面处理，可放置
+               {{productInfo.shortdes}}
             </view>
             <view class="price">
                 {{productInfo.price}}元
@@ -37,33 +28,23 @@
             <view class="tabs-views">
                 <view class="views" wx:if="{{tabIndex==1}}">
                     <view class="table">
-                         <view class="tbody">
-                             <view class="tr box box-pack-center box-align-center" wx:for="{{productInfo.params}}">
-                                 <view class="th">
-                                     {{item.label}}
-                                 </view>
-                                 <view class="td">
-                                     {{item.value}}
-                                 </view>
-                             </view>
-                         </view>
+                        <view class="tbody">
+                            <view class="tr box box-pack-center box-align-center" wx:for="{{productInfo.params}}">
+                                <view class="th">
+                                    {{item.label}}
+                                </view>
+                                <view class="td">
+                                    {{item.value}}
+                                </view>
+                            </view>
+                        </view>
                     </view>
                 </view>
-                <view class="views" wx:if="{{tabIndex==2}}">
-                     <view class="imgText_list">
-                         <view class="item">
-                                 <image src="{{static_path+'/750x480_03.jpg'}}"></image>
-                             <view class="text t-left">
-                                  休闲
-                             </view>
-                         </view>
-                         <view class="item">
-                             <image src="{{static_path+'/750x480_03.jpg'}}"></image>
-                             <view class="text t-right">
-                                 办公
-                             </view>
-                         </view>
-                     </view>
+                <view class="views" hidden="{{tabIndex==1}}">
+                    <view class="imgText_list">
+                        <!--引入detailcontent模板-->
+                        <template is="detailContent" data="{{ ...$detailContent.news }}"/>
+                    </view>
                 </view>
             </view>
         </view>
@@ -71,9 +52,9 @@
 
     <view class="product-footer">
         <view class="a">
-            <view class="iconfont icon-shoucang1"></view>
+            <view class="iconfont icon-shoucang2"></view>
         </view>
-        <view class="btn contactShop">
+        <view class="btn contactShop`">
             <view class="p">联系商家</view>
         </view>
         <view class="btn buyNow">

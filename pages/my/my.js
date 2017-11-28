@@ -1,4 +1,4 @@
-//index.js
+//my.js
 //获取应用实例
 import {
     $tabBar
@@ -12,13 +12,21 @@ Page({
     data: {},
 
     onLoad: function () {
-
+        let self =this;
         /**
          * 初始化tabBar组件
          */
+
         $tabBar.init({
             tabIndex:5
         });
+
+        app.getUserInfo().then(res=>{
+            self.setData({
+                userInfo:res
+            })
+        })
+
     },
 
     toPage(e) {
