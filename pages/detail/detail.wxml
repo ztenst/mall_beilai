@@ -52,7 +52,7 @@
 
     <view class="product-footer">
         <view class="a">
-            <view class="iconfont icon-shoucang1"></view>
+            <view class="iconfont icon-shoucang2"></view>
         </view>
         <view class="btn contactShop`">
             <view class="p">联系商家</view>
