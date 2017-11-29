@@ -10,35 +10,34 @@ App({
      */
     getUserOpenId: function () {
         var self = this;
-        return new Promise((resolve, reject) => {
-            if (!self.globalData.userInfo) {
-                wx.login({
-                    success: function (loginres) {
-                        wx.getUserInfo({
-                            success: function (RES) {
-                                let userInfo = RES.userInfo;
-                                self.globalData.userInfo = userInfo;
-                                api.getOpenId({code: loginres.code}).then(res => {
-                                    let json = res.data;
-                                    self.globalData.wxData = json;
-                                    if (!json.uid) {
-                                        let params = {
-                                            openid: json.open_id,
-                                            name: userInfo.nickName,
-                                            sex: userInfo.gender,
-                                            pro: userInfo.province,
-                                            city: userInfo.city
-                                        };
-                                        api.indexSub(params).then(res => {
 
-                                        });
-                                    }
-                                })
-                            }
-                        });
-                    }
-                })
-            }
+        return new Promise((resolve, reject) => {
+            wx.login({
+                success: function (loginres) {
+                    wx.getUserInfo({
+                        success: function (RES) {
+                            let userInfo = RES.userInfo;
+                            self.globalData.userInfo = userInfo;
+                            api.getOpenId({code: loginres.code}).then(res => {
+                                let json = res.data;
+                                self.globalData.wxData = json;
+                                if (!json.uid) {
+                                    let params = {
+                                        openid: json.open_id,
+                                        name: userInfo.nickName,
+                                        sex: userInfo.gender,
+                                        pro: userInfo.province,
+                                        city: userInfo.city
+                                    };
+                                    api.indexSub(params).then(res => {
+
+                                    });
+                                }
+                            })
+                        }
+                    });
+                }
+            })
         });
     },
     /**

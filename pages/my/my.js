@@ -14,6 +14,7 @@ Page({
 
     onLoad: function () {
         let self =this;
+
         /**
          * 初始化tabBar组件
          */
@@ -22,11 +23,13 @@ Page({
             tabIndex:5
         });
 
-        app.getUserOpenId().then(res => {
+        app.getUserInfo().then(res => {
             self.setData({
-                userInfo:app.globalData.userInfo
+                userInfo:res
             })
         });
+
+
     },
 
     toPage(e) {
