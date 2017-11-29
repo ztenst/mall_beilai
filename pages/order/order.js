@@ -65,5 +65,21 @@ Page({
             }
         })
 
+    },
+    /**
+     * 联系商家
+     */
+    contactShop() {
+        api.getIndexConfig().then(res => {
+            let json = res.data;
+            console.log(json);
+            if (json.status == 'success') {
+                if (json.data.phone) {
+                    wx.makePhoneCall({
+                        phoneNumber: json.data.phone
+                    });
+                }
+            }
+        })
     }
 });
