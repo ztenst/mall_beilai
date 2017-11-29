@@ -15,7 +15,6 @@ Page({
     data: {
         static_path: config.static_path,
 
-        kw:'',
         page: 0,
         max_page: 0,
         scrollTop: 100,
@@ -32,7 +31,14 @@ Page({
         $tabBar.init({
             tabIndex:2
         });
+
+        /**
+         * 初始化产品列表组件
+         */
+        $productList.init();
+
         let _q = Object.assign({}, Util.decodeKeys(query));
+
 
         self.searchFilterInit(_q, false);
 

@@ -1,14 +1,18 @@
 <import src="../../components/swiper/swiper.wxml"/>
 <import src="../../components/detail_content/detail_content.wxml"/>
+<import src="../../components/toast/toast.wxml"/>
+<template is="toast" data="{{ ...$toast }}"/>
 
 <view class="app detail">
-    <template is="swiper" data="{{imgUrls,...$swiper }}"></template>
+    <view class="ele-container" wx:if="{{productInfo.images}}">
+        <template is="swiper" data="{{imgUrls,...$swiper }}"></template>
+    </view>
 
     <view class="ele-container">
         <view class="titleView">
             <view class="name">{{productInfo.name}}</view>
             <view class="desc">
-               {{productInfo.shortdes}}
+                {{productInfo.shortdes}}
             </view>
             <view class="price">
                 {{productInfo.price}}元
@@ -51,13 +55,14 @@
     </view>
 
     <view class="product-footer">
-        <view class="a">
-            <view class="iconfont icon-shoucang2"></view>
+        <view class="a" bindtap="addCollect" >
+            <view class="iconfont icon-shoucang2" wx:if="{{productInfo.is_save==0}}" ></view>
+            <view class="iconfont icon-shoucang3" wx:if="{{productInfo.is_save==1}}"></view>
         </view>
-        <view class="btn contactShop`">
+        <view class="btn contactShop" bindatap="contactShop">
             <view class="p">联系商家</view>
         </view>
-        <view class="btn buyNow">
+        <view class="btn buyNow" bindtap="addOrder" data-id="{{productInfo.id}}">
             <view class="p">提交订单</view>
         </view>
     </view>

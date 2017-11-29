@@ -6,7 +6,7 @@
                 <view class="pic">
                     <image src="{{tabIndex==1?'../../images/hov-home.png':'../../images/icon-home.png'}}"></image>
                 </view>
-                <view class="text{{tabIndex==1?'on':''}}">
+                <view class="text {{tabIndex==1?'on':''}}">
                     首页
                 </view>
             </view>

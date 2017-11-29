@@ -4,7 +4,7 @@ import {
     $productList,
     $tabBar
 } from '../../components/wxcomponents'
-import config from '../../config'
+
 import api from '../../common/api'
 
 
@@ -13,7 +13,8 @@ const app = getApp();
 
 Page({
     data: {
-        static_path: config.static_path,
+        kw:'',
+        focused: false,
 
         page: 0,
         max_page: 0,
@@ -28,8 +29,13 @@ Page({
          * 初始化tabBar组件
          */
         $tabBar.init({
-            tabIndex:1
+            tabIndex: 1
         });
+
+
+        app.getUserOpenId().then(res => {});
+
+
         /**
          * 初始化产品列表组件
          */
@@ -92,15 +98,33 @@ Page({
         });
     },
 
-    go_category(e){
+    go_category(e) {
         let url = "/pages/category/category";
-        if(e){
-            let dataset =e.currentTarget.dataset;
-            app.goPage(url, {cid:dataset.id}, false);
-        }else{
+        if (e) {
+            let dataset = e.currentTarget.dataset;
+            app.goPage(url, {cid: dataset.id}, false);
+        } else {
             app.goPage(url, null, false);
         }
-
-    }
+    },
+    //搜索得到焦点
+    focus() {
+        this.setData({
+            focused: true
+        });
+    },
+    //设置搜索输入的关键字
+    inputkw(e) {
+        let self = this;
+        self.setData({
+            kw: e.detail.value
+        });
+    },
+    //搜索确认
+    confirm(e) {
+        console.log(e.detail.value)
+        let url="/pages/category/category";
+        app.goPage(url,{kw:e.detail.value},false)
+    },
 })
 ;

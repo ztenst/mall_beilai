@@ -1,0 +1,42 @@
+<import src="../../components/toast/toast.wxml"/>
+
+
+<view class="add_order bg-f5">
+    <view class="blank20"></view>
+    <form action="" bindsubmit='addOrder'>
+
+
+        <view class="plt24 bg-fff">
+            <view class="line box box-align-center box-pack-between">
+                <view>
+                    <label for="">姓名</label>
+                    <input type="text" name="username" class="ml100" placeholder-class="c-ccc" placeholder="请输入姓名"/>
+                </view>
+            </view>
+             <view class="line box box-align-center box-pack-between">
+                <view>
+                    <label for="">手机</label>
+                    <input type="text" name="phone" class="ml100" placeholder-class="c-ccc" placeholder="请输入手机号"/>
+                </view>
+            </view>
+            <view class="line box box-align-center box-pack-between">
+                <view>
+                    <label for="">备注</label>
+                    <input type="text" name="note" class="ml100" placeholder-class="c-ccc" placeholder="请输入备注"/>
+                </view>
+            </view>
+        </view>
+
+
+        <view class="big-btn">
+            <button class="btnBaoBei box box-pack-center box-align-center" form-type="submit">
+                提
+                <text style="width: 20rpx;"></text>
+                交
+            </button>
+        </view>
+
+    </form>
+
+    <template is="toast" data="{{ ...$toast }}"/>
+</view>

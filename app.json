@@ -9,7 +9,8 @@
     "pages/collect/collect",
     "pages/order/order",
     "pages/brief/brief",
-    "pages/article/article"
+    "pages/article/article",
+    "pages/add_order/add_order"
   ],
   "window":{
     "backgroundTextStyle":"light",

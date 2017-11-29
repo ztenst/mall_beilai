@@ -20,7 +20,6 @@ export default {
             methods: {
                 navigateDetail(e) {
                     let dataset = e.currentTarget.dataset;
-                    console.log(dataset);
                     let url = '/pages/detail/detail?id=' + dataset.id;
                     app.goPage(url, null, false);
                 }

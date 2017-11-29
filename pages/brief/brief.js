@@ -1,35 +1,38 @@
-//detail.js
-import config from '../../config'
+//brief.js
+import {
+    $tabBar,$detailContent
+} from '../../components/wxcomponents'
+import api from '../../common/api'
+
 //获取应用实例
 const app = getApp();
 
 Page({
     data: {
-        static_path: config.static_path,
 
-        indicatorDots: true,
-        autoplay: true,
-        interval: 3000,
-        duration: 100,
-        tabIndex:1,
-        "banner_list": [
-            {
-                "id": 0,
-                "url": "http://ozz7ch6ms.bkt.clouddn.com/750x826.jpg"
-            },
-            {
-                "id": "8273",
-                "url": "http://ozz7ch6ms.bkt.clouddn.com/750x826.jpg"
-            }
-        ]
     },
     onLoad: function () {
+        let self = this;
+        /**
+         * 初始化tabBar组件
+         */
+        $tabBar.init({
+            tabIndex: 5
+        });
+
+        api.getIntro().then(res=>{
+            let json= res.data;
+            console.log(json);
+            if(json.status=='success'){
+                /**
+                 *初始化图文详情组件
+                 */
+                $detailContent.init('news', {
+                    content: json.data.content.trim()
+                });
+            }
+        })
+
 
     },
-    tabFun(e){
-       let self=this,dataset=e.currentTarget.dataset;
-       self.setData({
-            tabIndex:dataset.index
-       })
-    }
 });

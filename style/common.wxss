@@ -156,8 +156,17 @@ a {
 .bg-color {
   background-color: #f5f6fb; }
 
+.c-fff {
+  color: #fff; }
+
+.c-ccc {
+  color: #ccc; }
+
 .bg-mianColor {
   background-color: #181c1f; }
+
+.plt24 {
+  padding-left: 24rpx; }
 
 .ft-nowap {
   white-space: nowrap;
@@ -236,5 +245,24 @@ a {
         color: #999; }
         .tabBar .item .cont .text.on {
           color: #181c1f; }
+
+.weui-toast {
+  position: fixed;
+  z-index: 100;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%); }
+  .weui-toast .weui-toast__content {
+    width: auto;
+    height: auto;
+    padding: 26rpx;
+    border-radius: 10rpx;
+    background: none;
+    background-color: rgba(0, 0, 0, 0.65);
+    color: #fff;
+    text-align: center;
+    text-overflow: ellipsis;
+    font-size: 30rpx; }
 
 /*# sourceMappingURL=common.wxss.map */

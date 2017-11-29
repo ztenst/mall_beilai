@@ -1,6 +1,6 @@
 //detail.js
 import {
-    $swiper,$detailContent
+    $swiper, $detailContent,$toast
 } from '../../components/wxcomponents'
 
 //获取应用实例
@@ -12,7 +12,7 @@ const app = getApp();
 Page({
     data: {
 
-        tabIndex:1,
+        tabIndex: 1,
         product_id: '',
 
     },
@@ -24,7 +24,6 @@ Page({
     onShow: function () {
         let self = this;
         let product_id = self.data.product_id;
-
         self.getProductDetail(product_id);
     },
     getProductDetail(product_id) {
@@ -78,6 +77,60 @@ Page({
         let self = this, dataset = e.currentTarget.dataset;
         self.setData({
             tabIndex: dataset.index
+        })
+    },
+    /**
+     * 添加收藏
+     */
+    addCollect(){
+        let self = this;
+
+        let params={
+            pid:self.data.product_id,
+            openid:app.globalData.wxData.open_id
+        }
+        api.addSave(params).then(res=>{
+             let json =res.data;
+            $toast.show({
+                timer: 2e3,
+                text: json.msg
+            });
+            if (json.status == 'success') {
+                if (self.data.productInfo.is_save == 0) {
+                    self.setData({
+                        [`productInfo.is_save`]: 1
+                    });
+                } else if (self.data.productInfo.is_save == 1) {
+                    self.setData({
+                        [`productInfo.is_save`]: 0
+                    })
+                }
+            }
+        })
+    },
+    /**
+     * 提交订单
+     * @param e
+     */
+    addOrder(e) {
+        let dataset = e.currentTarget.dataset, url = '/pages/add_order/add_order';
+        app.goPage(url, {id: dataset.id}, false);
+
+    },
+    /**
+     * 联系商家
+     */
+    contactShop(){
+        api.getIndexConfig().then(res=>{
+            let json= res.data;
+            console.log(json);
+            if(json.status=='success'){
+                if(json.data.phone){
+                    wx.makePhoneCall({
+                        phoneNumber: json.data.phone
+                    });
+                }
+            }
         })
     }
 });

@@ -3,10 +3,20 @@
 <import src="../../components/tab_bar/tab_bar.wxml"/>
 
 <view class="app index pdbm100">
-    <view class="index_search_bar bg-mianColor" bindtap="go_category">
+    <view class="index_search_bar bg-mianColor" >
+
         <view class="search-box">
-            <view><text class="iconfont icon-sousuo"></text>搜索商品</view>
+            <view bindtap="focus" wx:if="{{!focused}}" class="text-box"><text class="iconfont icon-sousuo"></text>搜索商品</view>
+
+            <view class="input-container container" hidden="{{!focused}}">
+                <view>
+                    <text class="iconfont icon-sousuo"></text>
+                    <input type="text" confirm-type="search" focus="{{focused}}" placeholder-class="c-fff"
+                           bindconfirm="confirm" placeholder="请输入关键字"/>
+                </view>
+            </view>
         </view>
+
     </view>
     <template is="swiper" data="{{imgUrls,...$swiper }}"></template>
 
@@ -38,8 +48,7 @@
 
 
     <!--列表-->
-    <scroll-view class="search-result" scroll-y="true"
-                 lower-threshold="100" bindscrolltolower="requestList" scroll-with-animation="true">
+    <scroll-view  scroll-y="true" lower-threshold="100" bindscrolltolower="requestList" scroll-with-animation="true">
         <block wx:if="{{!requested||max_page>0}}">
 
             <template is="productList" data="{{product_list, ...$productList }}"></template>

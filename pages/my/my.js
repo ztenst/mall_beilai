@@ -3,6 +3,7 @@
 import {
     $tabBar
 } from '../../components/wxcomponents'
+import api from '../../common/api'
 const app = getApp();
 
 Page({
@@ -21,12 +22,11 @@ Page({
             tabIndex:5
         });
 
-        app.getUserInfo().then(res=>{
+        app.getUserOpenId().then(res => {
             self.setData({
-                userInfo:res
+                userInfo:app.globalData.userInfo
             })
-        })
-
+        });
     },
 
     toPage(e) {
@@ -39,5 +39,18 @@ Page({
             url = "/pages/order/order";
         }
         app.goPage(url, null, false);
+    },
+    contactShop(){
+        api.getIndexConfig().then(res=>{
+            let json= res.data;
+            console.log(json);
+            if(json.status=='success'){
+                if(json.data.phone){
+                    wx.makePhoneCall({
+                        phoneNumber: json.data.phone
+                    });
+                }
+            }
+        })
     }
 });

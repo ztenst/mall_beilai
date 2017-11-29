@@ -33,7 +33,7 @@
                     </view>
                 </view>
             </view>
-            <view class="item ">
+            <view class="item " bindtap="contactShop">
                 <view class="content contact" >
                     <view class="pic">
                         <image src="../../images/icon-contact.png"></image>
