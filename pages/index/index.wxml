@@ -1,6 +1,8 @@
 <import src="../../components/swiper/swiper.wxml"/>
 <import src="../../components/product_list/product_list.wxml"/>
 <import src="../../components/tab_bar/tab_bar.wxml"/>
+<import src="../../components/toast/toast.wxml"/>
+<template is="toast" data="{{ ...$toast }}"/>
 
 <view class="app index pdbm100">
     <view class="index_search_bar bg-mianColor" >

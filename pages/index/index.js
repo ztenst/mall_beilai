@@ -2,7 +2,8 @@
 import {
     $swiper,
     $productList,
-    $tabBar
+    $tabBar,
+    $toast
 } from '../../components/wxcomponents'
 
 import api from '../../common/api'
@@ -32,8 +33,17 @@ Page({
             tabIndex: 1
         });
 
-
-        app.getUserOpenId().then(res => {});
+        app.getUserOpenId().then(res => {
+            let json = res.data;
+            if(json.status=='success'){
+                app.globalData.wxData.uid = json.data;
+            }else{
+                $toast.show({
+                    timer: 2e3,
+                    text: json.msg
+                });
+            }
+        });
 
 
         /**
