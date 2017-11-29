@@ -1,6 +1,15 @@
 @charset "UTF-8";
 @import "./common";
 
+.banner{
+  height: 376rpx!important;
+  .slide-image{
+    display: block;
+    height: 100%;
+    width:100%
+  }
+}
+
 //index
 .index{
 
@@ -51,12 +60,6 @@
       display: block;
       height: 100%;
       width:100%
-    }
-    .search-result {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
     }
   }
 
@@ -506,17 +509,12 @@
   padding-bottom:100rpx;
   .swiper{
     width: 100%;
+    height:376rpx;
+    overflow: hidden;
   }
 
 
-  .banner{
-    min-height: 376rpx!important;
-    .slide-image{
-      display: block!important;
-      min-height:826rpx!important;
-      width:100%!important;
-    }
-  }
+
 
   .titleView{
     padding:24rpx;
