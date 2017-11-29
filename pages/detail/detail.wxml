@@ -4,7 +4,7 @@
 <template is="toast" data="{{ ...$toast }}"/>
 
 <view class="app detail">
-    <view class="ele-container" wx:if="{{productInfo.e}}">
+    <view class="ele-container" wx:if="{{productInfo.images}}">
         <template is="swiper" data="{{imgUrls,...$swiper }}"></template>
     </view>
 
@@ -59,7 +59,7 @@
             <view class="iconfont icon-shoucang2" wx:if="{{productInfo.is_save==0}}" ></view>
             <view class="iconfont icon-shoucang3" wx:if="{{productInfo.is_save==1}}"></view>
         </view>
-        <view class="btn contactShop">
+        <view class="btn contactShop" bindatap="contactShop">
             <view class="p">联系商家</view>
         </view>
         <view class="btn buyNow" bindtap="addOrder" data-id="{{productInfo.id}}">

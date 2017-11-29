@@ -116,5 +116,21 @@ Page({
         let dataset = e.currentTarget.dataset, url = '/pages/add_order/add_order';
         app.goPage(url, {id: dataset.id}, false);
 
+    },
+    /**
+     * 联系商家
+     */
+    contactShop(){
+        api.getIndexConfig().then(res=>{
+            let json= res.data;
+            console.log(json);
+            if(json.status=='success'){
+                if(json.data.phone){
+                    wx.makePhoneCall({
+                        phoneNumber: json.data.phone
+                    });
+                }
+            }
+        })
     }
 });

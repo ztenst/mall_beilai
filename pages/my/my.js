@@ -41,7 +41,6 @@ Page({
         app.goPage(url, null, false);
     },
     contactShop(){
-
         api.getIndexConfig().then(res=>{
             let json= res.data;
             console.log(json);
