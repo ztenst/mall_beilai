@@ -1,6 +1,6 @@
 //detail.js
 import {
-    $swiper, $detailContent,$toast
+    $swiper, $detailContent, $toast
 } from '../../components/wxcomponents'
 
 //获取应用实例
@@ -82,15 +82,15 @@ Page({
     /**
      * 添加收藏
      */
-    addCollect(){
+    addCollect() {
         let self = this;
 
-        let params={
-            pid:self.data.product_id,
-            openid:app.globalData.wxData.open_id
+        let params = {
+            pid: self.data.product_id,
+            openid: app.globalData.wxData.open_id
         }
-        api.addSave(params).then(res=>{
-             let json =res.data;
+        api.addSave(params).then(res => {
+            let json = res.data;
             $toast.show({
                 timer: 2e3,
                 text: json.msg
@@ -120,12 +120,12 @@ Page({
     /**
      * 联系商家
      */
-    contactShop(){
-        api.getIndexConfig().then(res=>{
-            let json= res.data;
+    contactShop() {
+        api.getIndexConfig().then(res => {
+            let json = res.data;
             console.log(json);
-            if(json.status=='success'){
-                if(json.data.phone){
+            if (json.status == 'success') {
+                if (json.data.phone) {
                     wx.makePhoneCall({
                         phoneNumber: json.data.phone
                     });

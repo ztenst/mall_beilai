@@ -45,7 +45,7 @@
 
             </view>
             <view class="item" bindtap="toPage" data-type="order">
-                <view class="content contact">
+                <view class="content order">
                     <view class="pic">
                         <image src="../../images/icon-order.png"></image>
                     </view>
