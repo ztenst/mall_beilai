@@ -31,7 +31,14 @@ Page({
         $tabBar.init({
             tabIndex:2
         });
+
+        /**
+         * 初始化产品列表组件
+         */
+        $productList.init();
+
         let _q = Object.assign({}, Util.decodeKeys(query));
+
 
         self.searchFilterInit(_q, false);
 

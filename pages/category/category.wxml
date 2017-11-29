@@ -16,8 +16,7 @@
     </view>
 
     <!--列表-->
-    <scroll-view class="search-result" scroll-y="true"
-                 lower-threshold="100" bindscrolltolower="requestList" scroll-with-animation="true">
+    <scroll-view  scroll-y="true" lower-threshold="100" bindscrolltolower="requestList" scroll-with-animation="true">
         <block wx:if="{{!requested||max_page>0}}">
 
             <template is="productList" data="{{product_list, ...$productList }}"></template>
@@ -27,6 +26,7 @@
                 </view>
                 <view class="loading-text">加载中...</view>
             </view>
+
         </block>
 
         <!--无数据-->

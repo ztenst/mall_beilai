@@ -125,6 +125,21 @@ const api = {
         let url = `${config.host}/api/product/addOrder`
         return postRequest(url, params)
     },
+    /*添加或取消收藏*/
+    addSave(params) {
+        let url = `${config.host}/api/product/addSave`
+        return getRequest(url, params)
+    },
+    /*获取商家简介信息*/
+    getIntro(params) {
+        let url = `${config.host}/api/index/getIntro`
+        return getRequest(url, params)
+    },
+     /*获取商家联系电话*/
+    getIndexConfig(params) {
+        let url = `${config.host}/api/index/config`
+        return getRequest(url, params)
+    },
 
 
 };

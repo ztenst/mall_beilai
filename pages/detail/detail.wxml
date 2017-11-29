@@ -1,5 +1,7 @@
 <import src="../../components/swiper/swiper.wxml"/>
 <import src="../../components/detail_content/detail_content.wxml"/>
+<import src="../../components/toast/toast.wxml"/>
+<template is="toast" data="{{ ...$toast }}"/>
 
 <view class="app detail">
     <view class="ele-container" wx:if="{{productInfo.e}}">
@@ -53,8 +55,9 @@
     </view>
 
     <view class="product-footer">
-        <view class="a">
-            <view class="iconfont icon-shoucang2"></view>
+        <view class="a" bindtap="addCollect" >
+            <view class="iconfont icon-shoucang2" wx:if="{{productInfo.is_save==0}}" ></view>
+            <view class="iconfont icon-shoucang3" wx:if="{{productInfo.is_save==1}}"></view>
         </view>
         <view class="btn contactShop">
             <view class="p">联系商家</view>

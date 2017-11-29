@@ -10,37 +10,35 @@ App({
      */
     getUserOpenId: function () {
         var self = this;
-        //不要在30天后才更换openid-尽量提前10分钟更新 
         return new Promise((resolve, reject) => {
-            //  console.log(Object.keys(self.globalData.userInfo).length != 0)
-            // if (Object.keys(self.globalData.userInfo).length != 0) {
-            //     resolve(self.globalData);
-            // } else {
-            wx.login({
-                success: function (loginres) {
-                    wx.getUserInfo({
-                        success: function (resuserinfo) {
-                            self.globalData.userInfo = resuserinfo.userInfo;
-                            api.getOpenId({code: loginres.code}).then(res => {
-                                let data = res.data;
-                                self.globalData.wxData=data;
-                                if (!data.uid) {
-                                    let params = {
-                                        openid: data.open_id,
-                                        name: resuserinfo.userInfo.nickName,
-                                        sex: resuserinfo.userInfo.gender,
-                                        pro: resuserinfo.userInfo.province,
-                                        city: resuserinfo.userInfo.city
-                                    };
-                                    api.indexSub(params).then(res => {});
-                                }
-                                // resolve(data);
-                            })
-                        }
-                    });
-                }
-            })
-            // }
+            if (!self.globalData.userInfo) {
+                wx.login({
+                    success: function (loginres) {
+                        wx.getUserInfo({
+                            success: function (RES) {
+                                let userInfo = RES.userInfo;
+                                self.globalData.userInfo = userInfo;
+                                api.getOpenId({code: loginres.code}).then(res => {
+                                    let json = res.data;
+                                    self.globalData.wxData = json;
+                                    if (!json.uid) {
+                                        let params = {
+                                            openid: json.open_id,
+                                            name: userInfo.nickName,
+                                            sex: userInfo.gender,
+                                            pro: userInfo.province,
+                                            city: userInfo.city
+                                        };
+                                        api.indexSub(params).then(res => {
+
+                                        });
+                                    }
+                                })
+                            }
+                        });
+                    }
+                })
+            }
         });
     },
     /**
@@ -91,6 +89,6 @@ App({
     },
     globalData: {
         userInfo: null,
-        wxData:null
+        wxData: null
     }
 })

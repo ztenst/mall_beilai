@@ -11,7 +11,7 @@
             <view class="input-container container" hidden="{{!focused}}">
                 <view>
                     <text class="iconfont icon-sousuo"></text>
-                    <input type="text" confirm-type="search" focus="focused" placeholder-class="c-fff"
+                    <input type="text" confirm-type="search" focus="{{focused}}" placeholder-class="c-fff"
                            bindconfirm="confirm" placeholder="请输入关键字"/>
                 </view>
             </view>
@@ -48,8 +48,7 @@
 
 
     <!--列表-->
-    <scroll-view class="search-result" scroll-y="true"
-                 lower-threshold="100" bindscrolltolower="requestList" scroll-with-animation="true">
+    <scroll-view  scroll-y="true" lower-threshold="100" bindscrolltolower="requestList" scroll-with-animation="true">
         <block wx:if="{{!requested||max_page>0}}">
 
             <template is="productList" data="{{product_list, ...$productList }}"></template>

@@ -25,7 +25,6 @@ export default {
         const options = Object.assign({
             id,
         }, this.setDefaults(), opts);
-        console.log(options)
         // 实例化组件
         const component = new Component({
             scope: SCOPE,

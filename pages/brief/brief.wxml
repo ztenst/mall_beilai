@@ -1,53 +1,26 @@
+<import src="../../components/detail_content/detail_content.wxml"/>
+<import src="../../components/tab_bar/tab_bar.wxml"/>
+<template is="tabBar" data="{{...$tabBar }}"></template>
 <view class="app brief">
 
-    <view class="ele-container">
-        <view class="banner">
-            <image src="{{static_path+'/750x360-01.jpg'}}"></image>
-        </view>
-    </view>
+    <!--<view class="ele-container">-->
+        <!--<view class="banner">-->
+            <!--<image src="{{briefInfo.image}}"></image>-->
+        <!--</view>-->
+    <!--</view>-->
 
     <view class="ele-container">
         <view class="com-info">
-            <view class="hd">公司简介</view>
             <view class="bd">
                 <view class="p">
-                    云 space（www.yunspace.com.cn)
-                    隶属于上海星期网络科技有限公司，成立于2012年3月，是国内首家集场地
-                    、文创IP项目的展示、管理、交易为一体的商业空间服务平台，提供从活动空间到活动内容的综合解决方案。
-                    公司总部位于上海，在北京、广州、深圳、成都等主要城市设立分支机构。截至2016年5月，公司在长沙
-                    、厦门、武汉、昆明等15个区域设立了城市合伙人，平台上线场地近5万家，覆盖全国24个城市。
+                    <!--云 space（www.yunspace.com.cn)-->
+                    <!--隶属于上海星期网络科技有限公司，成立于2012年3月，是国内首家集场地-->
+                    <!--、文创IP项目的展示、管理、交易为一体的商业空间服务平台，提供从活动空间到活动内容的综合解决方案。-->
+                    <!--公司总部位于上海，在北京、广州、深圳、成都等主要城市设立分支机构。截至2016年5月，公司在长沙-->
+                    <!--、厦门、武汉、昆明等15个区域设立了城市合伙人，平台上线场地近5万家，覆盖全国24个城市。-->
+                    <!--引入detailcontent模板-->
+                    <template is="detailContent" data="{{ ...$detailContent.news }}"/>
                 </view>
-            </view>
-        </view>
-        <view class="blank20"></view>
-        <view class="com-info">
-            <view class="hd">公司大事记</view>
-            <view class="bd">
-                <view class="p">
-                    2012年03月
-                    www.yunspace.com.cn 官网上线，首次上线500家场地
-                    2013年03月
-                    第一个自运营场地——【云SPACE大宁秀场】开业
-                    2014年05月
-                    北京、深圳、广州、成都分站陆续成立
-                    2014年07月
-                    承办Chanel秋冬时装高定会，从此成为众多国际品牌青睐的秀场
-                    2014年11月
-                    获得上海市促进文化创意产业扶持资金
-                    2014年12月
-                    完成第一轮融资
-                    2015年03月
-                    云SPACE微信订阅用户突破10万
-                </view>
-            </view>
-        </view>
-        <view class="blank20"></view>
-        <view class="com-info">
-            <view class="hd">公众平台</view>
-            <view class="bd">
-               <view class="ScodeImg box box-align-center box-pack-center">
-                   <image src="{{static_path+'/scodeimg.jpg'}}"></image>
-               </view>
             </view>
         </view>
 

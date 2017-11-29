@@ -4,7 +4,7 @@ import {
     $productList,
     $tabBar
 } from '../../components/wxcomponents'
-import config from '../../config'
+
 import api from '../../common/api'
 
 
