@@ -29,9 +29,17 @@ App({
                                         pro: userInfo.province,
                                         city: userInfo.city
                                     };
-                                    api.indexSub(params).then(res => {
-
-                                    });
+                                    //
+                                    resolve(api.indexSub(params))
+                                    // api.indexSub(params).then(res => {
+                                    //     let json = res.data;
+                                    //     console.log(json);
+                                    //     if(json.status=='success'){
+                                    //         self.globalData.wxData.uid = json.data;
+                                    //     }else{
+                                    //
+                                    //     }
+                                    // });
                                 }
                             })
                         }
