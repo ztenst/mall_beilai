@@ -3,7 +3,7 @@
 
 <view class="add_order bg-f5">
     <view class="blank20"></view>
-    <form action="" bindsubmit='addOrder'>
+    <form action="" bindsubmit='addOrder'  report-submit>
 
         <view class="plt24 bg-fff">
             <view class="line box box-align-center box-pack-between">
