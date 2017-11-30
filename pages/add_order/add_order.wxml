@@ -5,7 +5,6 @@
     <view class="blank20"></view>
     <form action="" bindsubmit='addOrder'>
 
-
         <view class="plt24 bg-fff">
             <view class="line box box-align-center box-pack-between">
                 <view>

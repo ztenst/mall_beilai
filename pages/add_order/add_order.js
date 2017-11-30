@@ -41,7 +41,7 @@ Page({
      * @returns {boolean}
      */
     addOrder(e) {
-        let self = this, fObj = e.detail.value;
+        let self = this, fObj = e.detail.value,fId = e.detail.formId;//表单id
          console.log(fObj)
 
         if (!fObj.username) {
@@ -65,7 +65,8 @@ Page({
             openid: app.globalData.wxData.open_id,
             phone: fObj.phone,
             username: fObj.username,
-            note:fObj.note
+            note:fObj.note,
+            form_id: fId
         }
 
         api.addOrder(pack).then((res) => {

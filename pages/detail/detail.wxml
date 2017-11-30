@@ -56,8 +56,10 @@
 
     <view class="product-footer">
         <view class="a" bindtap="addCollect" >
-            <view class="iconfont icon-shoucang2" wx:if="{{productInfo.is_save==0}}" ></view>
-            <view class="iconfont icon-shoucang3" wx:if="{{productInfo.is_save==1}}"></view>
+            <view class="iconfont box box-align-center box-pack-center"  >
+                <image src="../../images/coll.png " wx:if="{{productInfo.is_save==0}}"></image>
+                <image src="../../images/hov-coll.png " wx:if="{{productInfo.is_save==1}}"></image>
+            </view>
         </view>
         <view class="btn contactShop"   bindtap="contactShop">
             <view class="p">联系商家</view>
