@@ -4,7 +4,7 @@
 'use strict';
 
 // ENV
-var env = 'development'; // 'development' or 'production'
+var env = 'production'; // 'development' or 'production'
 
 // hj_house_xcx VERSION
 var version = '1.0.1';
@@ -12,7 +12,7 @@ var version = '1.0.1';
 // development and production host
 var hosts = {
     development: 'http://mall.madridwine.cn',
-    production: 'http://mall.madridwine.cn'
+    production: 'https://beilai.madridwine.cn'
 };
 
 // static path
