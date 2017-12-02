@@ -10,7 +10,6 @@ App({
      */
     getUserOpenId: function () {
         var self = this;
-
         return new Promise((resolve, reject) => {
             wx.login({
                 success: function (loginres) {

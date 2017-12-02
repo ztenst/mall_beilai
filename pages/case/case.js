@@ -71,6 +71,16 @@ Page({
         })
 
     },
-
+    /**
+     * 转发分享
+     * @param res
+     * @returns {{title: string, path: string}}
+     */
+    onShareAppMessage(res) {
+        return {
+            title:'贝莱橱柜',
+            path: 'pages/case/case'
+        }
+    }
 })
 ;

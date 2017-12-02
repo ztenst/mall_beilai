@@ -20,7 +20,7 @@
             </view>
         </view>
     </view>
-
+     <!--<button bindtap="go_map">按钮</button>-->
     <view class="ele-container">
         <view class="card-box box">
             <view class="item" bindtap="toPage" data-type="brief">

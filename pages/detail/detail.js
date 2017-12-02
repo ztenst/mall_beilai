@@ -11,7 +11,7 @@ const app = getApp();
 
 Page({
     data: {
-
+        productInfo:{},
         tabIndex: 1,
         product_id: '',
 
@@ -20,6 +20,21 @@ Page({
         var self = this;
         let product_id = options.id;
         self.setData({product_id: product_id});
+
+        if(!app.globalData.wxData.uid){
+            app.getUserOpenId().then(res => {
+                let json = res.data;
+                if(json.status=='success'){
+                    app.globalData.wxData.uid = json.data;
+                }else{
+                    $toast.show({
+                        timer: 2e3,
+                        text: json.msg
+                    });
+                }
+            });
+        }
+
     },
     onShow: function () {
         let self = this;
@@ -132,5 +147,19 @@ Page({
                 }
             }
         })
+    },
+
+    /**
+     * 产品详细页转发分享
+     * @param res
+     * @returns {{title: string, path: string}}
+     */
+    onShareAppMessage(res) {
+        let self = this;
+        return {
+            title:self.data.productInfo.name,
+            path: 'pages/detail/detail?id='+self.data.productInfo.id
+        }
     }
+
 });
