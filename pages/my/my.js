@@ -55,5 +55,9 @@ Page({
                 }
             }
         })
+    },
+    go_map(){
+        let url = "/pages/map_navigator/map_navigator";
+        app.goPage(url, null, false);
     }
 });

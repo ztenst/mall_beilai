@@ -136,5 +136,20 @@ Page({
         let url="/pages/category/category";
         app.goPage(url,{kw:e.detail.value},false)
     },
+
+    /**
+     * 首页转发分享
+     * @param res
+     * @returns {{title: string, path: string}}
+     */
+    onShareAppMessage(res) {
+        return {
+            title:'贝莱橱柜',
+            path: 'pages/index/index'
+        }
+    }
+
+
+
 })
 ;

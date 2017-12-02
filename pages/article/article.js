@@ -10,15 +10,22 @@ import Util from '../../utils/util'
 const app = getApp();
 
 Page({
-    data: {},
+    data: {
+        articleInfo:{},
+        type:""
+    },
     onLoad: function (options) {
         let self = this;
+        self.setData({
+            type:options.type
+        })
         let apiname = options.type === 'find' ? 'getFindInfo' : 'getCaseInfo';
 
         api[apiname]({id: options.id}).then(res => {
             let json = res.data;
             if (json.status == 'success') {
-                wx.setNavigationBarTitle({title: json.data.name});//设置导航条标题
+
+                wx.setNavigationBarTitle({title: json.data.title});//设置导航条标题
 
                 self.setData({
                     articleInfo: json.data,
@@ -29,7 +36,6 @@ Page({
                 $detailContent.init('news', {
                     content: json.data.content.trim()
                 });
-
             } else {
                 wx.showToast({
                     title: json.msg,
@@ -44,6 +50,17 @@ Page({
             }
         });
     },
-    onShow: function () {},
+    /**
+     * 转发分享
+     * @param res
+     * @returns {{title: string, path: string}}
+     */
+    onShareAppMessage(res) {
+        let self =this;
+        return {
+            title:self.data.articleInfo.title,
+            path: 'pages/article/article?type='+self.data.type+'&id='+self.data.articleInfo.id
+        }
+    }
 
 });

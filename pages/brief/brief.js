@@ -1,6 +1,6 @@
 //brief.js
 import {
-    $tabBar,$detailContent
+    $tabBar, $detailContent
 } from '../../components/wxcomponents'
 import api from '../../common/api'
 
@@ -8,9 +8,7 @@ import api from '../../common/api'
 const app = getApp();
 
 Page({
-    data: {
-
-    },
+    data: {},
     onLoad: function () {
         let self = this;
         /**
@@ -20,10 +18,10 @@ Page({
             tabIndex: 5
         });
 
-        api.getIntro().then(res=>{
-            let json= res.data;
+        api.getIntro().then(res => {
+            let json = res.data;
             console.log(json);
-            if(json.status=='success'){
+            if (json.status == 'success') {
                 /**
                  *初始化图文详情组件
                  */
@@ -33,6 +31,16 @@ Page({
             }
         })
 
-
     },
+    /**
+     * 转发分享
+     * @param res
+     * @returns {{title: string, path: string}}
+     */
+    onShareAppMessage(res) {
+        return {
+            title: '贝莱橱柜',
+            path: 'pages/brief/brief'
+        }
+    }
 });

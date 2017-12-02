@@ -10,7 +10,8 @@
     "pages/order/order",
     "pages/brief/brief",
     "pages/article/article",
-    "pages/add_order/add_order"
+    "pages/add_order/add_order",
+    "pages/map_navigator/map_navigator"
   ],
   "window":{
     "backgroundTextStyle":"light",
