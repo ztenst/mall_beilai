@@ -76,7 +76,7 @@ Page({
      * 取消收藏
      */
     cancel_collect(e){
-
+        let self = this;
         let params = {
             pid: e.currentTarget.dataset.id,
             openid: app.globalData.wxData.open_id
@@ -87,6 +87,7 @@ Page({
                 timer: 2e3,
                 text: json.msg
             });
+            self.requestList();
         })
     }
 });
