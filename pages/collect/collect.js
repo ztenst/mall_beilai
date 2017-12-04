@@ -8,7 +8,7 @@ Page({
     data: {
 
         page: 0,
-        max_page: 0,
+        max_page: 1,
         requested: false, // 判断是否请求过数据, 每次重新搜索会重置
         loading: false,
         filters: {},
@@ -35,18 +35,46 @@ Page({
         self.requestList();
     },
     /**
+     * 取消收藏
+     */
+    cancel_collect(e){
+        let self = this;
+        let params = {
+            pid: e.currentTarget.dataset.id,
+            openid: app.globalData.wxData.open_id
+        }
+
+        api.addSave(params).then(res => {
+            let json = res.data;
+            $toast.show({
+                timer: 2e3,
+                text: json.msg
+            });
+            self.restartSearch();
+        })
+    },
+    /**
+     * 重置搜索
+     * @param filters
+     */
+    restartSearch() {
+        this.setData({
+            page: 0,
+            max_page: 0,
+            requested: false,
+            product_list: []
+        })
+        this.requestList()
+    },
+    /**
      * 搜索房产
      */
     requestList() {
+
         let self = this;
         let state = self.data;
         if (state.loading) return;
         if (state.requested && state.page >= state.max_page) return;
-
-        self.setData({
-            loading: true,
-            page: state.page + 1
-        });
 
         let params = Object.assign({'uid': app.globalData.wxData.uid, 'save': 1}, {page: this.data.page});
 
@@ -76,22 +104,5 @@ Page({
         let url = '/pages/detail/detail?id=' + dataset.id;
         app.goPage(url, null, false);
     },
-    /**
-     * 取消收藏
-     */
-    cancel_collect(e){
-        let self = this;
-        let params = {
-            pid: e.currentTarget.dataset.id,
-            openid: app.globalData.wxData.open_id
-        }
-        api.addSave(params).then(res => {
-            let json = res.data;
-            $toast.show({
-                timer: 2e3,
-                text: json.msg
-            });
-            self.requestList();
-        })
-    }
+
 });
