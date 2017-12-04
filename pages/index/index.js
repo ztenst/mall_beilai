@@ -117,6 +117,11 @@ Page({
             app.goPage(url, null, false);
         }
     },
+    go_detail(e){
+        let dataset = e.currentTarget.dataset, url="/pages/detail/detail";
+        app.goPage(url, {id: dataset.id}, false);
+    },
+
     //搜索得到焦点
     focus() {
         this.setData({
