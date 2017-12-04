@@ -57,6 +57,7 @@ Page({
                  * 初始化轮播图组件
                  */
                 $swiper.init({
+                    isCut:true,
                     indicatorDots: true,
                     autoplay: true,
                     interval: 3000,

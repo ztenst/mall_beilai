@@ -60,6 +60,7 @@ Page({
                     imgUrls: json.data.imgs
                 });
                 $swiper.init({
+                    isCut:false,
                     indicatorDots: true,
                     autoplay: true,
                     interval: 3000,

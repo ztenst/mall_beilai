@@ -29,7 +29,9 @@ export default {
             //图片宽度
             imgwidth: 750,
             //默认
-            current: 0
+            current: 0,
+            //是否裁剪
+            isCut:false
         }
     },
 
