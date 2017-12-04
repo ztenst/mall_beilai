@@ -1,5 +1,7 @@
 <import src="../../components/product_list/product_list.wxml"/>
 <import src="../../components/tab_bar/tab_bar.wxml"/>
+<import src="../../components/toast/toast.wxml"/>
+<template is="toast" data="{{ ...$toast }}"/>
 <template is="tabBar" data="{{...$tabBar }}"></template>
 
 <view class="app index pdbm100" style="padding-top:24rpx;">
@@ -10,7 +12,7 @@
             <view class="ele-container" wx:if="{{product_list.length>0}}">
                 <view class="f-list box">
                     <block wx:for="{{product_list}}" wx:key="id" >
-                        <view class="item" bindtap="{{navigateDetail}}" data-id="{{item.id}}">
+                        <view class="item" bindtap="navigateDetail" data-id="{{item.id}}">
                             <view class="pic">
                                 <image src="{{item.image}}" mode="scaleToFill"></image>
                                 <view class="tag" wx:if="{{item.old_price-item.price>0}}">
@@ -22,7 +24,7 @@
                                 <view class="brief ft-nowap">{{item.ts}}</view>
                                 <view class="price">
                                     {{item.price}}元
-                                    <text class="sc" bindtap="cancel_collect" data-id="{{item.id}}">取消收藏</text>
+                                    <text class="sc" catchtap="cancel_collect" data-id="{{item.id}}">取消收藏</text>
                                 </view>
 
                             </view>

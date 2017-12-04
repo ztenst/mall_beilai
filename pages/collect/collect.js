@@ -1,6 +1,5 @@
 import {
-    $productList,
-    $tabBar
+    $productList, $tabBar,$toast
 } from '../../components/wxcomponents'
 import api from '../../common/api'
 let app = getApp();
@@ -71,6 +70,11 @@ Page({
             }
         })
 
+    },
+    navigateDetail(e) {
+        let dataset = e.currentTarget.dataset;
+        let url = '/pages/detail/detail?id=' + dataset.id;
+        app.goPage(url, null, false);
     },
     /**
      * 取消收藏
