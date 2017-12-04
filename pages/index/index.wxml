@@ -35,13 +35,13 @@
 
     <view class="ele-container">
         <view class="cells_auto_fill box box-pack-between">
-            <view class="item" wx:for="{{index.short_recoms}}">
-                <image src="{{item.img}}" mode="scaleToFill"></image>
+            <view class="item" wx:for="{{index.short_recoms}}" bindtap="go_detail" data-id="{{item.pid}}">
+                <image src="{{item.img}}" mode="scaleToFill" ></image>
             </view>
         </view>
         <view class="cells_auto_fill">
             <view class="body">
-                <image src="{{index.long_recoms[0].img}}" mode="scaleToFill"></image>
+                <image src="{{index.long_recoms[0].img}}" mode="scaleToFill" bindtap="go_detail" data-id="{{index.long_recoms[0].pid}}"></image>
             </view>
         </view>
     </view>

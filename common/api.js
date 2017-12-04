@@ -140,8 +140,6 @@ const api = {
         let url = `${config.host}/api/index/config`
         return getRequest(url, params)
     },
-
-
 };
 
 module.exports = api
