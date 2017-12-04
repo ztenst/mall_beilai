@@ -23,6 +23,7 @@
 
     <view class="blank20"></view>
 
+
     <view class="ele-container">
         <view class="descTabsView">
             <view class="tabs box box-pack-between box-align-center">
@@ -30,20 +31,24 @@
                 <text class="tab {{tabIndex==2 ?'on':''}}" bindtap="tabFun" data-index="2">图文详情</text>
             </view>
             <view class="tabs-views">
-                <view class="views" wx:if="{{tabIndex==1}}">
+
+                <view class="views"  wx:if="{{tabIndex==1&&productInfo.params.length>0}}">
                     <view class="table">
                         <view class="tbody">
                             <view class="tr box box-pack-center box-align-center" wx:for="{{productInfo.params}}">
                                 <view class="th">
-                                    {{item.label}}
+                                    <text> {{item.label}}</text>
+
                                 </view>
                                 <view class="td">
-                                    {{item.value}}
+                                    <text>{{item.value}}</text>
+
                                 </view>
                             </view>
                         </view>
                     </view>
                 </view>
+
                 <view class="views" hidden="{{tabIndex==1}}">
                     <view class="imgText_list">
                         <!--引入detailcontent模板-->
@@ -64,7 +69,7 @@
         <view class="btn contactShop"   bindtap="contactShop">
             <view class="p">联系商家</view>
         </view>
-        <view class="btn buyNow" bindtap="addOrder" data-id="{{productInfo.id}}">
+        <view class="btn buyNow"  bindtap="addOrder"  data-id="{{productInfo.id}}">
             <view class="p">提交订单</view>
         </view>
     </view>

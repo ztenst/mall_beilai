@@ -71,5 +71,22 @@ Page({
             }
         })
 
+    },
+    /**
+     * 取消收藏
+     */
+    cancel_collect(e){
+
+        let params = {
+            pid: e.currentTarget.dataset.id,
+            openid: app.globalData.wxData.open_id
+        }
+        api.addSave(params).then(res => {
+            let json = res.data;
+            $toast.show({
+                timer: 2e3,
+                text: json.msg
+            });
+        })
     }
 });

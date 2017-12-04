@@ -5,8 +5,8 @@
   height: 376rpx!important;
   .slide-image{
     display: block;
-    height: 100%;
-    width:100%
+    width:100%;
+    overflow: hidden;
   }
 }
 
@@ -159,12 +159,21 @@
           margin-top: 20rpx;
           position: relative;
           white-space: nowrap;
+          width: 100%;
           .old{
             display: inline-block;
             margin-left: 12rpx;
             font-size: 24rpx;
             color: #999999;
             text-decoration: line-through;
+          }
+          .sc{
+            position: absolute;
+            bottom:-10rpx;
+            right:-24rpx;
+            font-size: 24rpx;
+            padding:10rpx;
+            color: #999999;
           }
         }
       }
@@ -507,14 +516,6 @@
 //detail
 .detail{
   padding-bottom:100rpx;
-  .swiper{
-    width: 100%;
-    height:376rpx;
-    overflow: hidden;
-  }
-
-
-
 
   .titleView{
     padding:24rpx;
@@ -577,8 +578,6 @@
           margin:40rpx 24rpx;
           border:1rpx solid $borderColorE6;
           .tbody{
-            display: table-row-group;
-            vertical-align: middle;
             border-color: inherit;
             width:100%;
             .tr{
@@ -593,11 +592,13 @@
                 width:114rpx;
                 word-break: break-all;
                 border-right:1rpx solid $borderColorE6;
+                text-align: left;
               }
               .td{
                 padding:27rpx 60rpx;
                 width:342rpx;
                 word-break: break-all;
+                text-align: left;
               }
             }
           }
