@@ -8,7 +8,7 @@ Page({
     data: {
 
         page: 0,
-        max_page: 1,
+        max_page: 0,
         requested: false, // 判断是否请求过数据, 每次重新搜索会重置
         loading: false,
         filters: {},
@@ -90,6 +90,7 @@ Page({
                     max_page: json.data.page_count,
                     product_list: state.product_list.concat(list),
                 });
+
             } else {
                 self.setData({
                     requested: true,

@@ -10,10 +10,8 @@ export default {
      */
     setDefaults() {
         return {
-            //图片
-            hdimg: [],
             //是否采用衔接滑动
-            circular: true,
+            circular: false,
             //是否显示画板指示点
             indicatorDots: false,
             //选中点的颜色
@@ -23,15 +21,15 @@ export default {
             //是否自动切换
             autoplay: false,
             //滑动动画时长毫秒
-            duration: 100,
+            duration: 2000,
             //所有图片的高度
             imgheights: [],
             //图片宽度
-            imgwidth: 750,
+            imgwidth: wx.getSystemInfoSync().screenWidth,
             //默认
             current: 0,
             //是否裁剪
-            isCut:false
+            isCut: false
         }
     },
 
@@ -42,30 +40,38 @@ export default {
             data: options,
             methods: {
                 // imageLoad: function (e) {
+                //     let  self =this;
                 //     /**
                 //      * 获取图片真实宽度
                 //      * @type {Number|number|string|*}
                 //      */
-                //     var imgwidth = e.detail.width,
-                //         imgheight = e.detail.height,
+                //     let $width = e.detail.width;
+                //     let $height = e.detail.height;
                 //         //宽高比
-                //         ratio = imgwidth / imgheight;
-                //     console.log(imgwidth, imgheight)
-                //     //计算的高度值
-                //     var viewHeight = 750 / ratio;
-                //     var imgheight = viewHeight;
+                //     let ratio = $width/$height;
                 //
-                //     let data = this.getComponentData();
-                //     var imgheights = data.imgheights
+                //     let data = self.getComponentData();
+                //
+                //     //计算的高度值
+                //     let imgHeight = data.imgwidth/ratio;
+                //     let imgheights = data.imgheights;
+                //
+                //     console.log(imgheights)
                 //     //把每一张图片的高度记录到数组里
-                //     imgheights.push(imgheight)
-                //     this.setData({
-                //         [`${SCOPE}.imgheights`]: imgheights,
-                //     })
+                //     imgheights.push(parseInt(imgHeight));
+                //
+                //     if(imgheights.length == data.imgheights.length){
+                //         self.setData({
+                //             [`${SCOPE}.imgheights`]: imgheights.reverse(),
+                //         });
+                //     }
+                //
+                //
                 // },
                 bindchange: function (e) {
                     this.setData({[`${SCOPE}.current`]: e.detail.current});
                 },
+
                 /**
                  * 查看大图
                  * @param {String} cur 当前展示图片

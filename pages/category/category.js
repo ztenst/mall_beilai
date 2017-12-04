@@ -14,7 +14,6 @@ const app = getApp();
 Page({
     data: {
         static_path: config.static_path,
-
         page: 0,
         max_page: 0,
         scrollTop: 100,
