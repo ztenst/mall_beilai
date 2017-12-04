@@ -7,7 +7,30 @@
     <scroll-view  scroll-y="true" lower-threshold="100" bindscrolltolower="requestList" scroll-with-animation="true">
         <block wx:if="{{!requested||max_page>0}}">
 
-            <template is="productList" data="{{product_list, ...$productList }}"></template>
+            <view class="ele-container" wx:if="{{product_list.length>0}}">
+                <view class="f-list box">
+                    <block wx:for="{{product_list}}" wx:key="id" >
+                        <view class="item" bindtap="{{navigateDetail}}" data-id="{{item.id}}">
+                            <view class="pic">
+                                <image src="{{item.image}}" mode="scaleToFill"></image>
+                                <view class="tag" wx:if="{{item.old_price-item.price>0}}">
+                                    <text>立减{{item.old_price-item.price}}元</text>
+                                </view>
+                            </view>
+                            <view class="info">
+                                <view class="name ft-nowap">{{item.name}}</view>
+                                <view class="brief ft-nowap">{{item.ts}}</view>
+                                <view class="price">
+                                    {{item.price}}元
+                                    <text class="sc" bindtap="cancel_collect" data-id="{{item.id}}">取消收藏</text>
+                                </view>
+
+                            </view>
+                        </view>
+                    </block>
+                </view>
+            </view>
+
             <view class="loading-container box box-align-center box-pack-center" wx:if="{{loading}}">
                 <view class="loading-gif">
                     <image src="../../images/loadingdetail.gif"></image>
