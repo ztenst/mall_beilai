@@ -4,9 +4,13 @@
             duration="{{duration}}" bindchange="{{bindchange}}" circular="{{circular}}">
         <block wx:for="{{imgUrls}}" wx:key="{{index}}">
             <swiper-item>
-                <image src="{{item}}{{isCut?'?imageView2/1/w/376/h/192/interlace/1/q/100':''}}"
+                <image src="{{item}}"
                        data-current="{{item}}"
-                       data-urls="{{imgUrls}}" bindtap="{{viewPic}}" class="slide-image"
+                       data-urls="{{imgUrls}}"
+                       bindtap="{{viewPic}}"
+                       class="slide-image"
+                       bindload="{{imageLoad}}"
+                       style="height:{{imgheights[current]}}rpx;width:{{imgwidth}}rpx;"
                 ></image>
             </swiper-item>
         </block>

@@ -1,5 +1,5 @@
 <import src="../../components/toast/toast.wxml"/>
-
+<template is="toast" data="{{ ...$toast }}"/>
 
 <view class="add_order bg-f5">
     <view class="blank20"></view>
@@ -36,6 +36,4 @@
         </view>
 
     </form>
-
-    <template is="toast" data="{{ ...$toast }}"/>
 </view>
