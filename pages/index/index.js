@@ -3,7 +3,8 @@ import {
     $swiper,
     $productList,
     $tabBar,
-    $toast
+    $toast,
+    $imageViewer
 } from '../../components/wxcomponents'
 
 import api from '../../common/api'
@@ -65,6 +66,13 @@ Page({
                     autoplay: true,
                     interval: 3000,
                     duration: 100,
+                    onclick(current,urls) {
+                        $imageViewer.show({
+                            current: current,
+                            urls: urls,
+                            cancel: () => console.log('Close gallery')
+                        })
+                    },
                 });
             }
         });

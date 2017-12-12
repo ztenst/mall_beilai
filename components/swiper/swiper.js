@@ -28,7 +28,8 @@ export default {
             //默认
             index: 0,
             //是否裁剪
-            isCut: false
+            isCut: false,
+            onclick(){}
         }
     },
 
@@ -57,24 +58,20 @@ export default {
                 bindchange: function (e) {
                     this.setData({[`${SCOPE}.index`]: e.detail.current});
                 },
-
-                // /**
-                //  * 查看大图
-                //  * @param {String} cur 当前展示图片
-                //  * @param {Array}  imageList 展示的图片列表
-                //  */
-                // viewPic(e) {
-                //     let cur = e.currentTarget.dataset.current;
-                //     let urls = e.currentTarget.dataset.urls;
-                //     let imageList = [];
-                //     urls.forEach(item => {
-                //         imageList.push(item)
-                //     })
-                //     wx.previewImage({
-                //         current: cur,
-                //         urls: imageList
-                //     });
-                // },
+                /**
+                 * 查看大图
+                 * @param {String} cur 当前展示图片
+                 * @param {Array}  imageList 展示的图片列表
+                 */
+                viewPic(e) {
+                    let cur = e.currentTarget.dataset.current;
+                    let urls = e.currentTarget.dataset.urls;
+                    let imageList = [];
+                    urls.forEach(item => {
+                        imageList.push(item)
+                    });
+                    typeof options.onclick === 'function' && options.onclick(cur,imageList);
+                },
             }
         });
 

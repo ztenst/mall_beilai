@@ -1,6 +1,6 @@
 //detail.js
 import {
-    $swiper, $detailContent, $toast
+    $swiper, $detailContent, $toast,$imageViewer
 } from '../../components/wxcomponents'
 
 //获取应用实例
@@ -64,6 +64,13 @@ Page({
                     autoplay: true,
                     interval: 3000,
                     duration: 100,
+                    onclick(current,urls) {
+                        $imageViewer.show({
+                            current: current,
+                            urls: urls,
+                            cancel: () => console.log('Close gallery')
+                        })
+                    },
                 });
 
                 /**

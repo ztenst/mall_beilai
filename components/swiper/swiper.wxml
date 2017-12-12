@@ -4,7 +4,6 @@
             class="swiper" style="height: {{imgheights[index]}}rpx;">
         <block wx:for="{{imgUrls}}" >
             <swiper-item>
-                <!--<view class="img"  style="background-image: url({{item}})"></view>-->
                 <image src="{{item}}" bindload="{{imageLoad}}" data-index="{{index}}"
                        data-current="{{item}}"
                        data-urls="{{imgUrls}}" bindtap="{{viewPic}}" class="slide-image" mode="widthFix"

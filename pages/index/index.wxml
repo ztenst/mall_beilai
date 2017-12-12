@@ -2,6 +2,8 @@
 <import src="../../components/product_list/product_list.wxml"/>
 <import src="../../components/tab_bar/tab_bar.wxml"/>
 <import src="../../components/toast/toast.wxml"/>
+<import src="../../components/image-viewer/image-viewer.wxml"/>
+
 <template is="toast" data="{{ ...$toast }}"/>
 
 <view class="app index pdbm100">
@@ -21,6 +23,7 @@
 
     </view>
     <template is="swiper" data="{{imgUrls,...$swiper }}"></template>
+    <template is="imageViewer" data="{{ ...$imageViewer }}"/>
 
     <view class="ele-container">
         <view class="index-nav box box-pack-between box-align-center">
