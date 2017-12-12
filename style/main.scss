@@ -5,17 +5,30 @@
 .swiper{
   width: 100%;
   height:auto;
-  .img{
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    background: top center no-repeat;
-    background-size: contain;
-  }
   image{
     width:100%;
     //height:100%;
+  }
+  .wx-swiper-dots.wx-swiper-dots-horizontal{
+    margin-bottom: 2rpx;
+  }
+  .wx-swiper-dot{
+    width:10rpx;
+    display: inline-flex;
+    height: 10rpx;
+    margin-left: 10rpx;
+    justify-content:space-between;
+    background:#fff;
+  }
+
+   .wx-swiper-dot-active{
+     width:26rpx;
+     display: inline-flex;
+     height: 10rpx;
+     justify-content:space-between;
+     content: '';
+     flex-grow: 1;
+     border-radius: 8rpx;
   }
 }
 //image-viewer
@@ -35,7 +48,7 @@
       position: absolute;
       top: 0;
       right: 0;
-      bottom: 88rpx;
+      bottom: 0;
       left: 0;
       background: center center no-repeat;
       background-size: contain;
@@ -640,7 +653,7 @@
   .product-footer{
     position: fixed;
     width:100%;
-    //height:100rpx;
+    height:100rpx;
     bottom:0;
     left:0;
     right:0;
@@ -648,24 +661,26 @@
     font-size:32rpx;
     background-color: #fff;
     .a{
-      display: inline-block;
       border-top:1rpx solid $borderColorE6;
       width:100rpx;
-      line-height: 90rpx;
+      height:100rpx;
+      box-sizing: border-box;
       text-align: center;
+      display: table;
       .iconfont{
-        padding-top:16rpx;
+        display: table-cell;
+        vertical-align: middle;
+        width:47rpx;
+        height:45rpx;
         image{
           width:47rpx;
           height:45rpx;
-          display: block;
-          margin:0 auto;
         }
       }
     }
     .btn{
       display: inline-block;
-      width:325rpx;
+      width:326rpx;
       line-height: 100rpx;
       text-align: center;
       color:#fff;

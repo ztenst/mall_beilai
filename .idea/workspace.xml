@@ -2,19 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8880d20b-6819-4a3f-9f23-2692221b5565" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/components/image-viewer/image-viewer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/components/image-viewer/image-viewer.wxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/style/animate.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.wxss" afterPath="$PROJECT_DIR$/app.wxss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.wxss.map" afterPath="$PROJECT_DIR$/app.wxss.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/swiper/swiper.js" afterPath="$PROJECT_DIR$/components/swiper/swiper.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/swiper/swiper.wxml" afterPath="$PROJECT_DIR$/components/swiper/swiper.wxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/wxcomponents.js" afterPath="$PROJECT_DIR$/components/wxcomponents.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/detail/detail.js" afterPath="$PROJECT_DIR$/pages/detail/detail.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/detail/detail.wxml" afterPath="$PROJECT_DIR$/pages/detail/detail.wxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/index/index.js" afterPath="$PROJECT_DIR$/pages/index/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/index/index.wxml" afterPath="$PROJECT_DIR$/pages/index/index.wxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project.config.json" afterPath="$PROJECT_DIR$/project.config.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style/common.scss" afterPath="$PROJECT_DIR$/style/common.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style/common.wxss" afterPath="$PROJECT_DIR$/style/common.wxss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style/common.wxss.map" afterPath="$PROJECT_DIR$/style/common.wxss.map" />
@@ -34,33 +29,82 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.wxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/index/index.wxml">
+      <file leaf-file-name="detail.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/detail/detail.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="12" column="74" lean-forward="true" selection-start-line="12" selection-start-column="74" selection-end-line="12" selection-end-column="74" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="image-viewer.wxml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/components/image-viewer/image-viewer.wxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="10" column="11" lean-forward="true" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+            <state relative-caret-position="202">
+              <caret line="88" column="0" lean-forward="true" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
               <folding>
-                <element signature="n#style#0;n#view#0;n#swiper-item#0;n#block#0;n#swiper#0;n#view#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="e#12#108#0" expanded="true" />
+                <element signature="e#119#153#0" expanded="true" />
+                <element signature="e#3191#3951#0" expanded="false" />
+                <element signature="e#4202#4558#0" expanded="false" />
+                <element signature="e#4687#4861#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="image-viewer.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/components/image-viewer/image-viewer.js">
+      <file leaf-file-name="swiper.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/components/swiper/swiper.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="13" column="6" lean-forward="true" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+            <state relative-caret-position="529">
+              <caret line="53" column="65" lean-forward="true" selection-start-line="53" selection-start-column="65" selection-end-line="53" selection-end-column="65" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.scss" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/style/main.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="355">
+              <caret line="680" column="9" lean-forward="true" selection-start-line="680" selection-start-column="9" selection-end-line="680" selection-end-column="9" />
+              <folding>
+                <element signature="e#598#961#0" expanded="false" />
+                <element signature="e#977#7499#0" expanded="false" />
+                <element signature="e#999#1756#0" expanded="false" />
+                <element signature="e#1770#2050#0" expanded="false" />
+                <element signature="e#7513#8255#0" expanded="false" />
+                <element signature="e#8269#8930#0" expanded="false" />
+                <element signature="e#14164#14629#0" expanded="false" />
+                <element signature="e#14646#16022#0" expanded="false" />
+                <element signature="e#16038#16968#0" expanded="false" />
+                <element signature="e#16992#18818#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/index/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="368">
+              <caret line="67" column="47" lean-forward="true" selection-start-line="67" selection-start-column="47" selection-end-line="67" selection-end-column="47" />
+              <folding>
+                <element signature="e#11#131#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="swiper.wxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/components/swiper/swiper.wxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="8" column="43" lean-forward="false" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="43" />
+              <folding>
+                <element signature="n#style#0;n#swiper#0;n#template#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="detail.wxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/detail/detail.wxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="639">
+              <caret line="77" column="39" lean-forward="true" selection-start-line="77" selection-start-column="39" selection-end-line="77" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -70,7 +114,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>tex</find>
       <find>addOrder</find>
       <find>tips</find>
       <find>config</find>
@@ -87,7 +130,6 @@
       <find>big-btn</find>
       <find>swiper</find>
       <find>contactShop</find>
-      <find>product-footer</find>
       <find>tabs-views</find>
       <find>tbody</find>
       <find>.detail</find>
@@ -100,6 +142,8 @@
       <find>hdimg</find>
       <find>banner</find>
       <find>$swiper</find>
+      <find>product-footer</find>
+      <find>.my</find>
     </findStrings>
     <replaceStrings>
       <replace>$color_primary</replace>
@@ -155,15 +199,15 @@
         <option value="$PROJECT_DIR$/components/swiper/swiper.wxml" />
         <option value="$PROJECT_DIR$/components/image-viewer/image-viewer.scss" />
         <option value="$PROJECT_DIR$/components/wxcomponents.js" />
-        <option value="$PROJECT_DIR$/pages/detail/detail.js" />
-        <option value="$PROJECT_DIR$/components/swiper/swiper.js" />
-        <option value="$PROJECT_DIR$/pages/detail/detail.wxml" />
-        <option value="$PROJECT_DIR$/style/main.scss" />
         <option value="$PROJECT_DIR$/pages/index/index.wxml" />
-        <option value="$PROJECT_DIR$/pages/index/index.js" />
-        <option value="$PROJECT_DIR$/style/common.scss" />
         <option value="$PROJECT_DIR$/components/image-viewer/image-viewer.js" />
         <option value="$PROJECT_DIR$/components/image-viewer/image-viewer.wxml" />
+        <option value="$PROJECT_DIR$/pages/index/index.js" />
+        <option value="$PROJECT_DIR$/pages/detail/detail.js" />
+        <option value="$PROJECT_DIR$/components/swiper/swiper.js" />
+        <option value="$PROJECT_DIR$/style/common.scss" />
+        <option value="$PROJECT_DIR$/pages/detail/detail.wxml" />
+        <option value="$PROJECT_DIR$/style/main.scss" />
       </list>
     </option>
   </component>
@@ -192,6 +236,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -207,14 +253,7 @@
             <path>
               <item name="mall_beilai" type="b2602c69:ProjectViewProjectNode" />
               <item name="mall_beilai" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="image-viewer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mall_beilai" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mall_beilai" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="swiper" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mall_beilai" type="b2602c69:ProjectViewProjectNode" />
@@ -229,14 +268,18 @@
             <path>
               <item name="mall_beilai" type="b2602c69:ProjectViewProjectNode" />
               <item name="mall_beilai" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="index" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mall_beilai" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mall_beilai" type="462c0819:PsiDirectoryNode" />
               <item name="style" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -250,16 +293,16 @@
     <property name="ignore_missing_gitignore" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Works\extra\ztenst\cupboard_xcx\cupboard_xcx\components" />
-      <recent name="D:\Works\extra\ztenst\cupboard_xcx\cupboard_xcx\pages\index-old" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Works\extra\ztenst\mall_beilai\mall_beilai\images" />
       <recent name="D:\Works\extra\ztenst\mall_beilai\mall_beilai\style" />
       <recent name="D:\Works\extra\ztenst\mall_beilai\mall_beilai\components" />
       <recent name="D:\Works\extra\ztenst\mall_beilai\mall_beilai\pages" />
       <recent name="D:\Works\extra\ztenst\mall_beilai\mall_beilai\components\tab_bar" />
-      <recent name="D:\Works\extra\ztenst\cupboard_xcx\cupboard_xcx\pages\modal" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Works\extra\ztenst\cupboard_xcx\cupboard_xcx\components" />
+      <recent name="D:\Works\extra\ztenst\cupboard_xcx\cupboard_xcx\pages\index-old" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -348,12 +391,13 @@
       <workItem from="1513062711871" duration="6000" />
       <workItem from="1513062720473" duration="10000" />
       <workItem from="1513064350339" duration="2512000" />
-      <workItem from="1513067496650" duration="1702000" />
+      <workItem from="1513067496650" duration="1783000" />
+      <workItem from="1513093121534" duration="3216000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="183925000" />
+    <option name="totallyTimeSpent" value="187222000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -667,45 +711,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/swiper/swiper.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" column="11" lean-forward="true" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
-          <folding>
-            <element signature="n#style#0;n#swiper#0;n#template#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/image-viewer/image-viewer.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/style/main.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding>
-            <element signature="e#55#279#0" expanded="false" />
-            <element signature="e#691#7213#0" expanded="false" />
-            <element signature="e#713#1470#0" expanded="false" />
-            <element signature="e#1484#1764#0" expanded="false" />
-            <element signature="e#7227#7969#0" expanded="false" />
-            <element signature="e#7983#8644#0" expanded="false" />
-            <element signature="e#8654#10883#0" expanded="false" />
-            <element signature="e#10901#13816#0" expanded="false" />
-            <element signature="e#13836#14301#0" expanded="false" />
-            <element signature="e#14318#15694#0" expanded="false" />
-            <element signature="e#15710#16640#0" expanded="false" />
-            <element signature="e#16664#18490#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/components/image-viewer/image-viewer.scss" />
     <entry file="file://$PROJECT_DIR$/components/wxcomponents.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -716,69 +722,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/detail/detail.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="36" lean-forward="false" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="48" />
-          <folding>
-            <element signature="e#119#153#0" expanded="true" />
-            <element signature="e#2942#3702#0" expanded="false" />
-            <element signature="e#3953#4309#0" expanded="false" />
-            <element signature="e#4438#4612#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/swiper/swiper.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="53" column="34" lean-forward="true" selection-start-line="53" selection-start-column="34" selection-end-line="53" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/style/common.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="12" column="17" lean-forward="true" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-          <folding>
-            <element signature="e#3513#3806#0" expanded="false" />
-            <element signature="e#3839#4169#0" expanded="false" />
-            <element signature="e#4187#4851#0" expanded="false" />
-            <element signature="e#4877#5268#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/detail/detail.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" column="65" lean-forward="true" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/index/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="12" lean-forward="true" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
           <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/index/index.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="12" column="74" lean-forward="true" selection-start-line="12" selection-start-column="74" selection-end-line="12" selection-end-column="74" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -790,20 +737,111 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/image-viewer/image-viewer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="13" column="6" lean-forward="true" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/components/image-viewer/image-viewer.wxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
           <caret line="10" column="11" lean-forward="true" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
           <folding>
             <element signature="n#style#0;n#view#0;n#swiper-item#0;n#block#0;n#swiper#0;n#view#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/index/index.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="12" column="74" lean-forward="false" selection-start-line="12" selection-start-column="74" selection-end-line="12" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/image-viewer/image-viewer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="13" column="6" lean-forward="false" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/detail/detail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="88" column="0" lean-forward="true" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+          <folding>
+            <element signature="e#12#108#0" expanded="true" />
+            <element signature="e#119#153#0" expanded="true" />
+            <element signature="e#3191#3951#0" expanded="false" />
+            <element signature="e#4202#4558#0" expanded="false" />
+            <element signature="e#4687#4861#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style/common.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2925">
+          <caret line="225" column="16" lean-forward="false" selection-start-line="225" selection-start-column="16" selection-end-line="225" selection-end-column="16" />
+          <folding>
+            <element signature="e#3513#3806#0" expanded="false" />
+            <element signature="e#3839#4169#0" expanded="false" />
+            <element signature="e#4187#4851#0" expanded="false" />
+            <element signature="e#4877#5268#0" expanded="false" />
+            <element signature="e#5301#5560#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/swiper/swiper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="53" column="65" lean-forward="true" selection-start-line="53" selection-start-column="65" selection-end-line="53" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/swiper/swiper.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" column="43" lean-forward="false" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="43" />
+          <folding>
+            <element signature="n#style#0;n#swiper#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/index/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="67" column="47" lean-forward="true" selection-start-line="67" selection-start-column="47" selection-end-line="67" selection-end-column="47" />
+          <folding>
+            <element signature="e#11#131#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/detail/detail.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="639">
+          <caret line="77" column="39" lean-forward="true" selection-start-line="77" selection-start-column="39" selection-end-line="77" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style/main.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="680" column="9" lean-forward="true" selection-start-line="680" selection-start-column="9" selection-end-line="680" selection-end-column="9" />
+          <folding>
+            <element signature="e#598#961#0" expanded="false" />
+            <element signature="e#977#7499#0" expanded="false" />
+            <element signature="e#999#1756#0" expanded="false" />
+            <element signature="e#1770#2050#0" expanded="false" />
+            <element signature="e#7513#8255#0" expanded="false" />
+            <element signature="e#8269#8930#0" expanded="false" />
+            <element signature="e#14164#14629#0" expanded="false" />
+            <element signature="e#14646#16022#0" expanded="false" />
+            <element signature="e#16038#16968#0" expanded="false" />
+            <element signature="e#16992#18818#0" expanded="false" />
           </folding>
         </state>
       </provider>

@@ -29,12 +29,16 @@ export default {
             index: 0,
             //是否裁剪
             isCut: false,
-            onclick(){}
+            onclick(){},
+            onFinishLoad(){},
+            imgUrlList:[]
         }
     },
 
     init(opts = {}) {
+        console.log(opts)
         const options = Object.assign({}, this.setDefaults(), opts);
+
         const component = new Component({
             scope: SCOPE,
             data: options,
@@ -54,6 +58,9 @@ export default {
                     self.setData({
                         [`${SCOPE}.imgheights`]: imgheights,
                     });
+                    if (index==data.imgUrlList.length-1){
+                        typeof options.onFinishLoad === 'function' && options.onFinishLoad();
+                    }
                 },
                 bindchange: function (e) {
                     this.setData({[`${SCOPE}.index`]: e.detail.current});

@@ -5,8 +5,12 @@
 
 
 <template is="toast" data="{{ ...$toast }}"/>
-
-<view class="app detail">
+<view class="detailLoading" hidden="{{isFinished}}">
+    <view class="loading-gif">
+        <image src="../../images/loadingdetail.gif"></image>
+    </view>
+</view>
+<view class="app detail" hidden="{{ !isFinished }}">
     <view class="ele-container" wx:if="{{productInfo.images}}">
         <template is="swiper" data="{{imgUrls,...$swiper }}"></template>
         <template is="imageViewer" data="{{ ...$imageViewer }}"/>
@@ -63,9 +67,9 @@
         </view>
     </view>
 
-    <view class="product-footer">
-        <view class="a" bindtap="addCollect" >
-            <view class="iconfont box box-align-center box-pack-center"  >
+    <view class="product-footer box">
+        <view class="a  box box-align-center box-pack-center" bindtap="addCollect" >
+            <view class="iconfont"  >
                 <image src="../../images/coll.png " wx:if="{{productInfo.is_save==0}}"></image>
                 <image src="../../images/hov-coll.png " wx:if="{{productInfo.is_save==1}}"></image>
             </view>

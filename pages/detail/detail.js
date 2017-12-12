@@ -14,6 +14,7 @@ Page({
         productInfo:{},
         tabIndex: 1,
         product_id: '',
+        isFinished: false,
 
     },
     onLoad: function (options) {
@@ -59,11 +60,17 @@ Page({
                  * 初始化轮播图组件
                  */
                 $swiper.init({
-                    isCut:true,
                     indicatorDots: true,
                     autoplay: true,
                     interval: 3000,
                     duration: 100,
+                    imgUrlList:json.data.images,
+                    onFinishLoad(){
+                        //隐藏加载logo
+                        self.setData({
+                            isFinished: true
+                        })
+                    },
                     onclick(current,urls) {
                         $imageViewer.show({
                             current: current,
