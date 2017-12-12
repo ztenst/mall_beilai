@@ -22,6 +22,7 @@ Page({
         self.setData({product_id: product_id});
 
         if(!app.globalData.wxData.uid){
+
             app.getUserOpenId().then(res => {
                 let json = res.data;
                 if(json.status=='success'){
@@ -33,6 +34,7 @@ Page({
                     });
                 }
             });
+
         }
 
     },

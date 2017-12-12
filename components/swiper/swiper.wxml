@@ -1,12 +1,13 @@
 <template name="swiper">
 
-    <swiper class="banner" indicator-dots="{{indicatorDots}}" vertical="{{vertical}}" autoplay="{{autoplay}}"
-            duration="{{duration}}" bindchange="{{bindchange}}" circular="{{circular}}">
-        <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+    <swiper indicator-dots="{{indicatorDots}}" vertical="{{vertical}}" autoplay="{{autoplay}}" duration="{{duration}}" bindchange="{{bindchange}}" circular="{{circular}}"
+            class="swiper" style="height: {{imgheights[index]}}rpx;">
+        <block wx:for="{{imgUrls}}" >
             <swiper-item>
-                <image src="{{item}}{{isCut?'?imageView2/1/w/376/h/192/interlace/1/q/100':''}}"
+                <!--<view class="img"  style="background-image: url({{item}})"></view>-->
+                <image src="{{item}}" bindload="{{imageLoad}}" data-index="{{index}}"
                        data-current="{{item}}"
-                       data-urls="{{imgUrls}}" bindtap="{{viewPic}}" class="slide-image"
+                       data-urls="{{imgUrls}}" bindtap="{{viewPic}}" class="slide-image" mode="widthFix"
                 ></image>
             </swiper-item>
         </block>

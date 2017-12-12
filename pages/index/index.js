@@ -86,7 +86,7 @@ Page({
             page: state.page + 1
         });
 
-        let params = Object.assign({}, {page: this.data.page});
+        let params = Object.assign({'limit':6}, {page: this.data.page});
 
         api.getProductList(params).then(resp => {
             let json = resp.data;

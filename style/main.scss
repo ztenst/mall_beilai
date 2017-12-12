@@ -1,12 +1,21 @@
 @charset "UTF-8";
 @import "./common";
 
-.banner{
-  width:100%;
-  height:376rpx!important;
-  .slide-image{
+//swiper
+.swiper{
+  width: 100%;
+  height:auto;
+  .img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    background: top center no-repeat;
+    background-size: contain;
+  }
+  image{
     width:100%;
-    height:376rpx!important;
+    //height:100%;
   }
 }
 
@@ -32,7 +41,6 @@
          vertical-align: middle;
         margin-right:10rpx;
       }
-
       .input-container {
         line-height: 58rpx;
         >view {
@@ -51,16 +59,9 @@
         }
 
       }
+
     }
 
-  }
-  .banner{
-    height: 376rpx!important;
-    .slide-image{
-      display: block;
-      height: 100%;
-      width:100%
-    }
   }
 
   .index-nav{
