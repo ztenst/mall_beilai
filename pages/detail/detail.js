@@ -1,6 +1,6 @@
 //detail.js
 import {
-    $swiper, $detailContent, $toast
+    $swiper, $detailContent, $toast,$imageViewer
 } from '../../components/wxcomponents'
 
 //获取应用实例
@@ -22,6 +22,7 @@ Page({
         self.setData({product_id: product_id});
 
         if(!app.globalData.wxData.uid){
+
             app.getUserOpenId().then(res => {
                 let json = res.data;
                 if(json.status=='success'){
@@ -33,6 +34,7 @@ Page({
                     });
                 }
             });
+
         }
 
     },
@@ -62,6 +64,13 @@ Page({
                     autoplay: true,
                     interval: 3000,
                     duration: 100,
+                    onclick(current,urls) {
+                        $imageViewer.show({
+                            current: current,
+                            urls: urls,
+                            cancel: () => console.log('Close gallery')
+                        })
+                    },
                 });
 
                 /**

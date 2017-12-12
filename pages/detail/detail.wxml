@@ -1,11 +1,15 @@
 <import src="../../components/swiper/swiper.wxml"/>
 <import src="../../components/detail_content/detail_content.wxml"/>
 <import src="../../components/toast/toast.wxml"/>
+<import src="../../components/image-viewer/image-viewer.wxml"/>
+
+
 <template is="toast" data="{{ ...$toast }}"/>
 
 <view class="app detail">
     <view class="ele-container" wx:if="{{productInfo.images}}">
         <template is="swiper" data="{{imgUrls,...$swiper }}"></template>
+        <template is="imageViewer" data="{{ ...$imageViewer }}"/>
     </view>
 
     <view class="ele-container">
