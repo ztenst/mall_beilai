@@ -62,9 +62,7 @@ Page({
                 });
                 $swiper.init({
                     indicatorDots: true,
-                    autoplay: true,
-                    interval: 3000,
-                    duration: 100,
+                    autoplay: false,
                     imgUrlList: json.data.imgs,
                     onclick(current, urls) {
                         $imageViewer.show({

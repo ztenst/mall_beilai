@@ -61,9 +61,7 @@ Page({
                  */
                 $swiper.init({
                     indicatorDots: true,
-                    autoplay: true,
-                    interval: 3000,
-                    duration: 100,
+                    autoplay: false,
                     imgUrlList:json.data.images,
                     onFinishLoad(){
                         //隐藏加载logo
