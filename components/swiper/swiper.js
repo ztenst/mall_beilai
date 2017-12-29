@@ -11,7 +11,7 @@ export default {
     setDefaults() {
         return {
             //是否采用衔接滑动
-            circular: false,
+            circular: true,
             //是否显示画板指示点
             indicatorDots: false,
             //选中点的颜色

@@ -29,10 +29,10 @@ Page({
                 if(json.status=='success'){
                     app.globalData.wxData.uid = json.data;
                 }else{
-                    $toast.show({
-                        timer: 2e3,
-                        text: json.msg
-                    });
+                    // $toast.show({
+                    //     timer: 2e3,
+                    //     text: json.msg
+                    // });
                 }
             });
 
