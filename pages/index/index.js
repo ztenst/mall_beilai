@@ -15,7 +15,7 @@ const app = getApp();
 
 Page({
     data: {
-        kw:'',
+        kw: '',
         focused: false,
 
         page: 0,
@@ -36,13 +36,13 @@ Page({
 
         app.getUserOpenId().then(res => {
             let json = res.data;
-            if(json.status=='success'){
+            if (json.status == 'success') {
                 app.globalData.wxData.uid = json.data;
-            }else{
-                $toast.show({
-                    timer: 2e3,
-                    text: json.msg
-                });
+            } else {
+                // $toast.show({
+                //     timer: 2e3,
+                //     text: json.msg
+                // });
             }
         });
 
@@ -61,12 +61,10 @@ Page({
                     imgUrls: json.data.imgs
                 });
                 $swiper.init({
-                    isCut:false,
                     indicatorDots: true,
-                    autoplay: true,
-                    interval: 3000,
-                    duration: 100,
-                    onclick(current,urls) {
+                    autoplay: false,
+                    imgUrlList: json.data.imgs,
+                    onclick(current, urls) {
                         $imageViewer.show({
                             current: current,
                             urls: urls,
@@ -94,7 +92,7 @@ Page({
             page: state.page + 1
         });
 
-        let params = Object.assign({'limit':6}, {page: this.data.page});
+        let params = Object.assign({'limit': 6}, {page: this.data.page});
 
         api.getProductList(params).then(resp => {
             let json = resp.data;
@@ -126,8 +124,8 @@ Page({
             app.goPage(url, null, false);
         }
     },
-    go_detail(e){
-        let dataset = e.currentTarget.dataset, url="/pages/detail/detail";
+    go_detail(e) {
+        let dataset = e.currentTarget.dataset, url = "/pages/detail/detail";
         app.goPage(url, {id: dataset.id}, false);
     },
 
@@ -147,8 +145,8 @@ Page({
     //搜索确认
     confirm(e) {
         console.log(e.detail.value)
-        let url="/pages/category/category";
-        app.goPage(url,{kw:e.detail.value},false)
+        let url = "/pages/category/category";
+        app.goPage(url, {kw: e.detail.value}, false)
     },
 
     /**
@@ -158,11 +156,10 @@ Page({
      */
     onShareAppMessage(res) {
         return {
-            title:'贝莱橱柜',
+            title: '贝莱橱柜',
             path: 'pages/index/index'
         }
     }
-
 
 
 })

@@ -14,6 +14,7 @@ Page({
         productInfo:{},
         tabIndex: 1,
         product_id: '',
+        isFinished: false,
 
     },
     onLoad: function (options) {
@@ -28,10 +29,10 @@ Page({
                 if(json.status=='success'){
                     app.globalData.wxData.uid = json.data;
                 }else{
-                    $toast.show({
-                        timer: 2e3,
-                        text: json.msg
-                    });
+                    // $toast.show({
+                    //     timer: 2e3,
+                    //     text: json.msg
+                    // });
                 }
             });
 
@@ -59,11 +60,15 @@ Page({
                  * 初始化轮播图组件
                  */
                 $swiper.init({
-                    isCut:true,
                     indicatorDots: true,
-                    autoplay: true,
-                    interval: 3000,
-                    duration: 100,
+                    autoplay: false,
+                    imgUrlList:json.data.images,
+                    onFinishLoad(){
+                        //隐藏加载logo
+                        self.setData({
+                            isFinished: true
+                        })
+                    },
                     onclick(current,urls) {
                         $imageViewer.show({
                             current: current,

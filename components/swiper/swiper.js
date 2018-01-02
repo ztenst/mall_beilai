@@ -11,7 +11,7 @@ export default {
     setDefaults() {
         return {
             //是否采用衔接滑动
-            circular: false,
+            circular: true,
             //是否显示画板指示点
             indicatorDots: false,
             //选中点的颜色
@@ -29,12 +29,16 @@ export default {
             index: 0,
             //是否裁剪
             isCut: false,
-            onclick(){}
+            onclick(){},
+            onFinishLoad(){},
+            imgUrlList:[]
         }
     },
 
     init(opts = {}) {
+        console.log(opts)
         const options = Object.assign({}, this.setDefaults(), opts);
+
         const component = new Component({
             scope: SCOPE,
             data: options,
@@ -54,6 +58,9 @@ export default {
                     self.setData({
                         [`${SCOPE}.imgheights`]: imgheights,
                     });
+                    if (index==data.imgUrlList.length-1){
+                        typeof options.onFinishLoad === 'function' && options.onFinishLoad();
+                    }
                 },
                 bindchange: function (e) {
                     this.setData({[`${SCOPE}.index`]: e.detail.current});
